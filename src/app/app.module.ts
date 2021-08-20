@@ -55,7 +55,7 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     MatIconModule,
     MatChipsModule,
     MatGridListModule,
-    NgxGoogleAnalyticsModule.forRoot('G-B9X2K11W9Z'),
+    NgxGoogleAnalyticsModule.forRoot('G-LW9HCX3DP2'),
     MatDialogModule
   ],
   providers: [],
