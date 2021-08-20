@@ -9,29 +9,29 @@
 
 @font-face{
     font-family: 'SF-ultralight';
-    src: url('~/assets/SF-Pro-Display-Ultralight.otf');
+    src: url('/assets/SF-Pro-Display-Ultralight.otf');
 }
 
 @font-face{
     font-family: 'SF-bold';
-    src: url('~/assets/SF-Pro-Display-Bold.otf');
+    src: url('/assets/SF-Pro-Display-Bold.otf');
 }
 @font-face{
     font-family: 'SF-medium';
-    src: url('~/assets/SF-Pro-Display-Medium.otf');
+    src: url('/assets/SF-Pro-Display-Medium.otf');
 }
 @font-face{
     font-family: 'SF-regular';
-    src: url('~/assets/SF-Pro-Display-Regular.otf');
+    src: url('/assets/SF-Pro-Display-Regular.otf');
 }
 @font-face{
     font-family: 'SF-semibold';
-    src: url('~/assets/SF-Pro-Display-Semibold.otf');
+    src: url('/assets/SF-Pro-Display-Semibold.otf');
 }
 
 @font-face{
     font-family: 'Eina-bold';
-    src: url('~/assets/Eina03-Bold.ttf');
+    src: url('/assets/Eina03-Bold.ttf');
 }
 .eina-bold{
     font-family: 'Eina-bold';
@@ -39,7 +39,7 @@
 
 @font-face{
     font-family: 'Eina-semibold';
-    src: url('~/assets/Eina03-Semibold.ttf');
+    src: url('/assets/Eina03-Semibold.ttf');
 }
 .eina-semibold{
     font-family: 'Eina-semibold';
@@ -47,7 +47,7 @@
 
 @font-face{
     font-family: 'Eina-regular';
-    src: url('~/assets/Eina03-Regular.ttf');
+    src: url('/assets/Eina03-Regular.ttf');
 }
 .eina-regular{
     font-family: 'Eina-regular';
@@ -55,7 +55,7 @@
 
 @font-face{
     font-family: 'Eina-light';
-    src: url('/../../assets/Eina03-Light.ttf');
+    src: url('/assets/Eina03-Light.ttf');
 }
 .eina-light{
     font-family: 'Eina-light';
