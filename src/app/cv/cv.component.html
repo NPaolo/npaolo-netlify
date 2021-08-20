@@ -1,0 +1,184 @@
+<style type="text/css">
+    .sfondolight { background-color: white }
+  .sfondodark { background-color: #222f3e !important; color: whitesmoke !important; }
+    .testolight     { color: black !important; }
+    .testodark      { color: whitesmoke !important; }
+    .shadowdark     { box-shadow: -10px 15px 40px -20px #c8dcff; }
+    .cardark        { background-color: #222f3e; background-blend-mode: darken; color: whitesmoke;}
+  </style>
+    
+<div  class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+    <div class="row" id="head">
+        <div class="col-12" style="z-index: 999 !important;">
+            <span (click)="goHome()" class="header-span">
+            <img src="assets/pn.png" class="pn-logo" alt="">
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome">aolo</span>
+            <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
+            </span>
+        </div>
+    </div>   
+
+    <div class="row">
+        <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">
+            <!-- <mat-chip-list>
+                <div class="d-flex justify-content-center align-items-center">
+                    <mat-chip class="mat-elevation-z24">
+                        <mat-icon>navigate_before</mat-icon>
+                        Home
+                    </mat-chip>
+                </div>
+            </mat-chip-list> -->
+        </div>
+        <div class="col-12 toggle-container" style="text-align: center;" >
+                <!-- <img src="assets/drop.png" alt="" id="mode" (click)="switchMode()" *ngIf="!mode">
+                <img src="assets/droplight.png" alt="" id="mode" (click)="switchMode()" *ngIf="mode"> -->
+                <!-- <span class="material-icons"  (click)="switchMode()">invert_colors</span> -->
+                <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
+        </div>
+    </div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <mat-card class="mat-elevation-z8 mt-4" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
+        <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
+            <div class="col-lg-6 col-xs-12 left">
+                <h1>Bio</h1>
+                <img src="./assets/leaf.png" class="icon" alt="">
+            </div>
+            <div class="col-lg-6 col-xs-12 right">
+                Name  <span class="impo">Paolo Nazzaro</span> <br>
+                Date of Birth  <span class="impo">22 / 10 / 1996</span> <br>
+                Place of Birth  <span class="impo">Rome</span> <br>
+                Email  <span class="impo">paolonazzaro23@gmail.com</span>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z24 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
+    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
+        <div class="col-lg-6 col-xs-12 left">
+            <h1>Education & Training</h1>
+            <img src="./assets/pencil.png" class="icon" alt="">
+        </div>
+        <div class="col-lg-6 col-xs-12 right">
+            <span class="impo">Languages in the Information Society Degree</span><br>
+            <span class="when">2015-2020</span><br>
+            <span class="info"> University of Rome Tor Vergata <br>
+            Graduated with 110/110 with the thesis "Font's analysis and use in web communication". </span><br>
+            <span class="impo">European project EU-MADE4LL</span> <br>
+            <span class="when">2017</span> <br>
+            <span class="info">Production of a corporate video regarding the University of Rome Tor Vergata. </span><br>
+            <span class="impo">Scientific High School Degree</span> <br>
+            <span class="when">2010-2015</span>
+        </div>
+    </div>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
+    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
+        <div class="col-lg-6 col-xs-12 left">
+            <h1>Work</h1>
+            <img src="./assets/briefcase.png" class="icon" alt="">
+        </div>
+        <div class="col-lg-6 col-xs-12 right">
+            <span class="impo">Front End Developer at RoTechnology</span><br>
+            <span class="when">2020-now</span><br>
+            <span class="info">Regular Contractor at <b>Accenture</b> for Angular/Ionic based project.</span><br>
+            <span class="impo">Web Developing Assistant at Tor Vergata University</span> <br>
+            <span class="when">2019-now</span> <br>
+            <span class="info">University Tutor for HTML + CSS + JavaScript based courses.</span><br>
+            <span class="impo">Front End Developer at Trevize s.r.l</span><br>
+            <span class="when">2019-2020</span><br>
+            <span class="info">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span><br>
+            <span class="impo">Web Developing Teaching Assistant at Betacom</span> <br>
+            <span class="when">2019</span> <br>
+            <span class="info">Teaching Assistant for Angular based courses.</span><br>
+            <span class="impo">Journalist at Quotidiano del Lazio</span> <br>
+            <span class="when">2018-2020</span> <br>
+            <span class="impo">Office Clerk at Tor Vergata University</span> <br>
+            <span class="when">2018</span>
+        </div>
+    </div>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
+    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
+        <div class="col-lg-6 col-xs-12 left">
+            <h1>Projects</h1>
+            <img src="./assets/presentation.png" class="icon" alt="">
+        </div>
+        <div class="col-lg-6 col-xs-12 right">
+            <span class="impo" id="t4f" (click)="goTv()"> Tor Vergata 4 Foreigners</span> <br>
+            <span class="when">2020</span><br>
+            <span class="info">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students. </span><br>
+            <span class="impo" id="eaa">European Aviation Academy</span> <br>
+            <span class="when">2020</span> <br>
+            <span class="info"> <a href="https://flyeaa.com/" target="_blank">https://flyeaa.com/ </a> <br>
+                Elementor + Wordpress based web site </span><br>
+        </div>
+    </div>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
+    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
+        <div class="col-lg-6 col-xs-12 left">
+            <h1>Skills</h1>
+            <img src="./assets/diamond.png" class="icon" alt="">
+        </div>
+        <div class="col-lg-6 col-xs-12 right">
+            <span class="impo">Developing</span> <br>
+            <span class="info">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress </span><br>
+            <span class="impo">Design</span> <br>
+            <span class="topic">Logo / Icon Design</span><br>
+            <span class="moreinfo">Illustrator, Photoshop</span><br>
+            <span class="impo">Languages</span> <br>
+            <span class="info">English C1, German B1</span><br>
+        </div>
+    </div>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
+    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
+        <div class="col-lg-6 col-xs-12 left">
+            <h1>Interests</h1>
+            <img src="./assets/ball.png" class="icon" alt="">
+        </div>
+        <div class="col-lg-6 col-xs-12 right">
+            <span class="impo">Design</span> <br>
+            <span class="info">Creation of minimal graphic contents</span><br>
+            <span class="impo">Sports</span> <br>
+            <span class="topic">Basketball</span><br>
+            <span class="moreinfo">Playing since 2002</span><br>
+            <span class="topic">Soccer</span> <br>
+        </div>
+    </div>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center" style="text-align: center; margin-top: 3%;">
+    <mat-chip-list>
+        <mat-chip class="mat-elevation-z6" color="primary" selected="true">
+            <a style="color: white;" href="javascript:void(0)" 
+            (click)="downloadPdf('./assets/cv-paolo-nazzaro-pdf.pdf','cv-paolo-nazzaro')" >
+            Download PDF
+          </a>
+        </mat-chip>
+    </mat-chip-list>
+
+</div>
+
+<div class="d-flex justify-content-center pt-3 pb-1 eina-light txt-70">
+    Designed by Paolo Nazzaro
+</div>
+
+
+</div> 

@@ -1,0 +1,18 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-12 col-lg-6 eina-semibold logo-info">
+        Logo designer for <br>
+        <div class="eina-bold">
+            <h3>{{data.title}} </h3>
+        </div>
+
+        <br>
+        <div class="eina-light">{{data.description}}</div>
+        <br>
+        <mat-chip selected [color]="data.color" class="visit">
+            <a [href]="data.url" target="_blank">Visit</a>
+        </mat-chip>
+    </div>
+    <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+        <img [src]="data.image" class="logo" alt="">
+    </div>
+</div>

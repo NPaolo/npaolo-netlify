@@ -1,0 +1,57 @@
+<style type="text/css">
+    .sfondolight { background-color: white } 
+    .sfondodark { background-color: #222f3e; color: whitesmoke; }
+    .visible { overflow: visible; transition-duration: 1s;}
+    .hidden { overflow: hidden; }
+  </style>
+
+
+<div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+    <div class="row" id="head">
+        <div class="col-12" style="z-index: 999 !important;">
+            <span (click)="goHome()" class="header-span">
+            <img src="assets/pn.png" class="pn-logo" alt="">
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome">aolo</span>
+            <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
+            </span>
+        </div>
+    </div>  
+
+    <div class="row">
+        <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">
+
+        </div>
+        <div class="col-12 toggle-container" style="text-align: center;" >
+                <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
+        </div>
+    </div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
+        <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
+            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center left">
+                <h1>Teaching Assistant</h1>
+            </div>
+            <div class="col-lg-6 col-xs-12 right">
+                <div class="textTeach" style="font-family: 'Eina-semibold';">
+                    <b><a href="http://giorgiopiccardo.com" target="_blank">Prof. Giorgio Piccardo</a></b>'s teaching assistant for <b>Web Developing</b> courses.<br><br>
+                    <mat-chip-list>
+                        <mat-chip class="p-2" color="primary" selected="true">
+                            <a style="color: white;" href="https://www-2020.linfo.lettere.uniroma2.it/" target="_blank">
+                            LINFO course</a>
+                        </mat-chip>
+                    </mat-chip-list><br>
+                    <span style="font-family: 'Eina-bold';">Tor Vergata University</span><br>
+                    <span style="font-family: 'Eina-light';">Via Columbia, 1, 00133 Roma RM</span><br>
+                    <span style="font-family: 'Eina-semibold';">Languages in the Information Society</span>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<div class="fixed-bottom d-flex justify-content-center pt-3 pb-1 eina-light txt-70">
+    Designed by Paolo Nazzaro
+</div>
+
+</div>

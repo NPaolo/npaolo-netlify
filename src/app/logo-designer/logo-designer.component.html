@@ -1,0 +1,95 @@
+<style type="text/css">
+    .sfondolight { background-color: white } 
+    .sfondodark { background-color: #222f3e; color: whitesmoke; }
+    .visible { overflow: visible; transition-duration: 1s;}
+    .hidden { overflow: hidden; }
+  </style>
+
+
+<div class="container-fluid mb-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+    <div class="row" id="head">
+        <div class="col-12" style="z-index: 999 !important;">
+            <span (click)="goHome()" class="header-span">
+            <img src="assets/pn.png" class="pn-logo" alt="">
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome">aolo</span>
+            <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
+            </span>
+        </div>
+    </div>  
+
+    <div class="row">
+        <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">
+
+        </div>
+        <div class="col-12 toggle-container" style="text-align: center;" >
+                <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
+        </div>
+    </div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
+        <div class="row" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
+            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center left eina-bold">
+                <h1>Logo Designer</h1>
+            </div>
+            <div class="col-lg-6 col-xs-12 right">
+                <div class="eina-semibold">
+                    Enhancing brands' visual identity.<br><br>
+                </div>
+                <div class="eina-regular">
+                    Formal participation to <a href="http://giorgiopiccardo.com" target="_blank">Un nuovo logo per La nuvola</a>
+                </div><br>
+                <div class="eina-light txt-90">
+                    You can find some of my recent projects just below.
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<!-- WEB PROJECTS -->
+<div class="web-projects d-flex flex-column justify-content-center align-items-center">
+    <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple
+    *ngFor="let project of projects">
+    <div class="row d-flex align-items-center project-content">
+        <div class="col-lg-6 eina-regular pl-4">
+            <span class="eina-semibold">Client </span>{{project.title}}<hr>
+            <span class="eina-semibold">Date </span>{{project.date}}<hr>
+            <span class="eina-semibold">Description </span>{{project.description}}
+        </div>
+        <div class="col-lg-6 text-center">
+            <img class="project-img" [src]="project.image" alt="">
+        </div>
+    </div>
+</mat-card>
+</div>
+<!--  -->
+
+
+<!-- MOBILE PROJECTS -->
+<div class="mobile-projects" *ngFor="let project of projects; let i = index">
+	<mat-card class="tp-box mat-elevation-z12 mt-4 d-flex align-items-center" (click)="toggleFlip(i)" [@flipState]="projects[i].flip"
+    [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+		<div class="front-card text-center d-flex align-items-center justify-content-center" *ngIf="projects[i].flip === 'inactive'">
+            <img class="project-img" [src]="project.image" alt="">
+		</div>
+		<div class="back-card eina-regular pl-4" *ngIf="projects[i].flip === 'active'">
+            <span class="eina-semibold">Client </span>{{project.title}}<hr>
+            <span class="eina-semibold">Date </span>{{project.date}}<hr>
+            <span class="eina-semibold">Description </span>{{project.description}}
+            <mat-chip-list>
+                <mat-chip selected [color]="project.color" class="visit mt-2 px-3">
+                    <a class="text-white eina-semibold" [href]="project.url" target="_blank">Visit</a>
+                </mat-chip>
+            </mat-chip-list>
+		</div>
+	</mat-card>
+</div>
+<!--  -->
+
+
+<div class="d-flex justify-content-center pt-3 pb-1 eina-light txt-70">
+    Designed by Paolo Nazzaro
+</div>
+
+</div>
