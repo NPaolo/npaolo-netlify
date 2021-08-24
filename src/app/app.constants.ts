@@ -1,3 +1,45 @@
+export const logos = [
+    {
+        title: 'Il mio avvocato',
+        description: 'Online tool for legal assistance.',
+        image: 'assets/avvocato-logo.png',
+        url: 'https://ilmioavvocato.online/',
+        color: 'primary',
+        hexcolor: '#3847A0',
+        date: 'February 2021',
+        flip: 'inactive'
+    },
+    {
+        title: 'Time To Marketing',
+        description: 'Online marketing community.',
+        image: 'assets/t2m.png',
+        url: 'https://timetomarketing.netlify.app/',
+        color: 'accent',
+        hexcolor: '#FF4081',
+        date: 'April 2021',
+        flip: 'inactive'
+    },
+    {
+        title: 'Moka',
+        description: 'Musical project based in Rome.',
+        image: 'assets/moka.png',
+        url: 'https://www.instagram.com/musichedeimoka/',
+        color: 'warn',
+        hexcolor: '#F44335',
+        date: 'July 2021',
+        flip: 'inactive'
+    },
+    {
+        title: 'CatoCotuNardo',
+        description: 'Radio show on Teleradiostereo 92.7',
+        image: 'assets/catocotunardo.png',
+        url: 'https://www.facebook.com/catocotunardo',
+        color: 'warn',
+        hexcolor: '#F44335',
+        date: 'August 2021',
+        flip: 'inactive'
+    }
+]
 export const AVVOCATO = {
     title: 'Il mio avvocato',
     description: 'Online tool for legal assistance.',
@@ -23,5 +65,14 @@ export const MOKA = {
     url: 'https://www.instagram.com/musichedeimoka/',
     color: 'warn',
     date: 'July 2021',
+    flip: 'inactive'
+}
+export const CCN = {
+    title: 'CatoCotuNardo',
+    description: 'Radio show on Teleradiostereo 92.7',
+    image: 'assets/catocotunardo.png',
+    url: 'https://www.facebook.com/catocotunardo',
+    color: 'warn',
+    date: 'August 2021',
     flip: 'inactive'
 }

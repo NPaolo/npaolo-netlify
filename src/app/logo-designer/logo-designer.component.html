@@ -50,15 +50,15 @@
 <!-- WEB PROJECTS -->
 <div class="web-projects d-flex flex-column justify-content-center align-items-center">
     <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple
-    *ngFor="let project of projects">
+    *ngFor="let logo of logos">
     <div class="row d-flex align-items-center project-content">
         <div class="col-lg-6 eina-regular pl-4">
-            <span class="eina-semibold">Client </span>{{project.title}}<hr>
-            <span class="eina-semibold">Date </span>{{project.date}}<hr>
-            <span class="eina-semibold">Description </span>{{project.description}}
+            <span class="eina-semibold">Client </span>{{logo.title}}<hr>
+            <span class="eina-semibold">Date </span>{{logo.date}}<hr>
+            <span class="eina-semibold">Description </span>{{logo.description}}
         </div>
         <div class="col-lg-6 text-center">
-            <img class="project-img" [src]="project.image" alt="">
+            <img class="project-img" [src]="logo.image" alt="">
         </div>
     </div>
 </mat-card>
@@ -67,22 +67,29 @@
 
 
 <!-- MOBILE PROJECTS -->
-<div class="mobile-projects" *ngFor="let project of projects; let i = index">
-	<mat-card class="tp-box mat-elevation-z12 mt-4 d-flex align-items-center" (click)="toggleFlip(i)" [@flipState]="projects[i].flip"
+<div class="mobile-projects" *ngFor="let logo of logos; let i = index">
+	<mat-card class="tp-box mat-elevation-z12 mt-4 d-flex align-items-center flex-column" (click)="toggleFlip(i)" [@flipState]="logos[i].flip"
     [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
-		<div class="front-card text-center d-flex align-items-center justify-content-center" *ngIf="projects[i].flip === 'inactive'">
-            <img class="project-img" [src]="project.image" alt="">
+		<div class="front-card text-center d-flex align-items-center justify-content-center h-75 mt-auto" 
+        *ngIf="logos[i].flip === 'inactive'">
+            <img class="project-img" [src]="logo.image" alt="">
 		</div>
-		<div class="back-card eina-regular pl-4" *ngIf="projects[i].flip === 'active'">
-            <span class="eina-semibold">Client </span>{{project.title}}<hr>
-            <span class="eina-semibold">Date </span>{{project.date}}<hr>
-            <span class="eina-semibold">Description </span>{{project.description}}
-            <mat-chip-list>
-                <mat-chip selected [color]="project.color" class="visit mt-2 px-3">
-                    <a class="text-white eina-semibold" [href]="project.url" target="_blank">Visit</a>
-                </mat-chip>
-            </mat-chip-list>
+		<div class="back-card eina-regular pt-2 pl-4" *ngIf="logos[i].flip === 'active'">
+            <span class="eina-semibold">Client </span>{{logo.title}}<hr>
+            <span class="eina-semibold">Date </span>{{logo.date}}<hr>
+            <span class="eina-semibold">Description </span>{{logo.description}}
+            <div class="d-flex justify-content-between align-items-center">
+                <mat-chip-list>
+                    <mat-chip selected [color]="logo.color" class="visit mt-2 px-3">
+                        <a class="text-white eina-semibold" [href]="logo.url" target="_blank">Visit</a>
+                    </mat-chip>
+                </mat-chip-list>
+                <i class="bi bi-arrow-right-circle-fill" [ngStyle]="{ 'color': logo.hexcolor }"></i>
+            </div>
 		</div>
+        <mat-card-content *ngIf="logos[i].flip === 'inactive'" class="w-100 text-end pr-2" >
+            <i class="bi bi-arrow-right-circle-fill" [ngStyle]="{ 'color': logo.hexcolor }"></i>
+        </mat-card-content>
 	</mat-card>
 </div>
 <!--  -->

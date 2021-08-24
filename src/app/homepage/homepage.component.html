@@ -84,24 +84,10 @@
                             </a>
                         </mat-chip>
                         <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
-                            <a (click)="openDialog(AVVOCATO.title, AVVOCATO.description, AVVOCATO.image, AVVOCATO.url, AVVOCATO.color)"
+                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'" *ngFor="let logo of logos; let i=index">
+                            <a (click)="openDialog(logo.title, logo.description, logo.image, logo.url, logo.color)"
                              style="color: inherit !important;">
-                                Il mio avvocato
-                            </a>
-                        </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
-                            <a (click)="openDialog(T2M.title, T2M.description, T2M.image, T2M.url, T2M.color)"
-                             style="color: inherit !important;">
-                                Time To Marketing
-                            </a>
-                        </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
-                            <a (click)="openDialog(MOKA.title, MOKA.description, MOKA.image, MOKA.url, MOKA.color)"
-                             style="color: inherit !important;">
-                                Moka
+                                {{logo.title}}
                             </a>
                         </mat-chip>
                         </div>

@@ -5,7 +5,7 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DialogComponent } from '../dialog/dialog.component';
-import { AVVOCATO, T2M, MOKA } from '../app.constants'
+import { AVVOCATO, T2M, MOKA, CCN, logos } from '../app.constants'
 import { ThemeService } from '../theme.service';
 
 
@@ -20,6 +20,8 @@ mode : boolean;
 readonly AVVOCATO = AVVOCATO;
 readonly T2M = T2M;
 readonly MOKA = MOKA;
+readonly CCN = CCN;
+readonly logos = logos
 
 
 constructor(private x : Router, private ts: ThemeService, public dialog: MatDialog) {}
