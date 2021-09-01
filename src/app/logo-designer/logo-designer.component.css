@@ -4,8 +4,11 @@ mat-card {
     /* box-shadow: 5px 5px 20px 0px #c8dcff !important; */
 }
 
-.project-img {
-    width: 30%;
+.lg {
+    width: 35%;
+}
+.sm {
+    width: 45%;
 }
 
 /* .container-fluid {
@@ -31,7 +34,12 @@ mat-card {
     .project-img {
         margin-bottom: 5%;
         text-align: left !important;
-        width: 60%;
+    }
+    .lg {
+        width: 45%;
+    }
+    .sm {
+        width: 55%;
     }
 }
 
@@ -42,6 +50,7 @@ mat-card {
     mat-card {
         max-width: 70%;
     }
+
 }
 
 .tp-box {

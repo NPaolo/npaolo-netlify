@@ -34,10 +34,9 @@ export class LogoDesignerComponent implements OnInit {
   ngOnInit(): void {
     if(this.ts.modeBool === true) {
       this.mode = true;
-    } else { this.mode = false}
-    if (this.mode === true) {
       this.T2M.image = 'assets/t2m-dark.png';
-    } else {
+    } else { 
+      this.mode = false;
       this.T2M.image = 'assets/t2m.png';
     }
   }

@@ -17,27 +17,24 @@ mat-card {
 .sezione{
     padding-top: 2%;
     padding-bottom: 2%;
-    font-family: 'Eina-light';
+    font-family: 'SF-light';
 }
 
 .left{
     text-align: center;
 }
-h1{
-    font-family: 'Eina-bold';
-}
 .impo{
-    font-family: 'Eina-semibold';
+    font-family: 'SF-semibold';
 }
 .lessimpo{
-    font-family: 'Eina-regular';
+    font-family: 'SF-regular';
 }
 .when{
-    font-family: 'Eina-regular';
+    font-family: 'SF-regular';
     font-size: 80%;
 }
 .topic{
-    font-family: 'Eina-regular';
+    font-family: 'SF-regular';
     font-size: 90%;
 }
 .info{

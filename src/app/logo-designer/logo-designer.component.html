@@ -11,7 +11,7 @@
         <div class="col-12" style="z-index: 999 !important;">
             <span (click)="goHome()" class="header-span">
             <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome">aolo</span>
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome" class="text-bold">aolo</span>
             <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
             </span>
         </div>
@@ -29,17 +29,18 @@
 <div class="d-flex justify-content-center align-items-center">
     <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
         <div class="row" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
-            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center left eina-bold">
+            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center left text-bold">
                 <h1>Logo Designer</h1>
             </div>
             <div class="col-lg-6 col-xs-12 right">
-                <div class="eina-semibold">
+                <div class="text-semibold">
                     Enhancing brands' visual identity.<br><br>
                 </div>
-                <div class="eina-regular">
-                    Formal participation to <a href="http://giorgiopiccardo.com" target="_blank">Un nuovo logo per La nuvola</a>
+                <div class="text-regular">
+                    Formal participation to <a href="https://www.eurspa.it/it/gare-e-fornitori/gare/gare-eur-spa/bando-concorso-idee-definizione-nuovo-logo-la-nuvola" target="_blank">
+                        Un nuovo logo per La nuvola</a>
                 </div><br>
-                <div class="eina-light txt-90">
+                <div class="text-thin txt-90">
                     You can find some of my recent projects just below.
                 </div>
             </div>
@@ -52,13 +53,14 @@
     <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple
     *ngFor="let logo of logos">
     <div class="row d-flex align-items-center project-content">
-        <div class="col-lg-6 eina-regular pl-4">
-            <span class="eina-semibold">Client </span>{{logo.title}}<hr>
-            <span class="eina-semibold">Date </span>{{logo.date}}<hr>
-            <span class="eina-semibold">Description </span>{{logo.description}}
+        <div class="col-lg-6 text-regular pl-4">
+            <span class="text-semibold">Client </span>{{logo.title}}<hr>
+            <span class="text-semibold">Date </span>{{logo.date}}<hr>
+            <span class="text-semibold">Description </span>{{logo.description}}
         </div>
         <div class="col-lg-6 text-center">
-            <img class="project-img" [src]="logo.image" alt="">
+            <img class="project-img" [src]="logo.image" alt=""
+            [ngClass]="logo.size === 'lg' ? 'lg' : 'sm'">
         </div>
     </div>
 </mat-card>
@@ -72,16 +74,17 @@
     [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
 		<div class="front-card text-center d-flex align-items-center justify-content-center h-75 mt-auto" 
         *ngIf="logos[i].flip === 'inactive'">
-            <img class="project-img" [src]="logo.image" alt="">
+            <img class="project-img" [src]="logo.image" alt=""
+            [ngClass]="logo.size === 'lg' ? 'lg' : 'sm'">
 		</div>
-		<div class="back-card eina-regular pt-2 pl-4" *ngIf="logos[i].flip === 'active'">
-            <span class="eina-semibold">Client </span>{{logo.title}}<hr>
-            <span class="eina-semibold">Date </span>{{logo.date}}<hr>
-            <span class="eina-semibold">Description </span>{{logo.description}}
-            <div class="d-flex justify-content-between align-items-center">
+		<div class="back-card text-regular pt-2 pl-4" *ngIf="logos[i].flip === 'active'">
+            <span class="text-semibold">Client </span>{{logo.title}}<hr>
+            <span class="text-semibold">Date </span>{{logo.date}}<hr>
+            <span class="text-semibold">Description </span>{{logo.description}}
+            <div class="d-flex justify-content-between align-items-center pt-2">
                 <mat-chip-list>
                     <mat-chip selected [color]="logo.color" class="visit mt-2 px-3">
-                        <a class="text-white eina-semibold" [href]="logo.url" target="_blank">Visit</a>
+                        <a class="text-white text-semibold" [href]="logo.url" target="_blank">Visit</a>
                     </mat-chip>
                 </mat-chip-list>
                 <i class="bi bi-arrow-right-circle-fill" [ngStyle]="{ 'color': logo.hexcolor }"></i>
@@ -95,7 +98,7 @@
 <!--  -->
 
 
-<div class="d-flex justify-content-center pt-3 pb-1 eina-light txt-70">
+<div class="d-flex justify-content-center pt-3 pb-1 text-thin txt-70">
     Designed by Paolo Nazzaro
 </div>
 

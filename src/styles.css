@@ -7,11 +7,11 @@
     font-display: swap;
 }
 
+/* SAN FRANCISCO */
 @font-face{
-    font-family: 'SF-ultralight';
+    font-family: 'SF-light';
     src: url('/assets/SF-Pro-Display-Ultralight.otf');
 }
-
 @font-face{
     font-family: 'SF-bold';
     src: url('/assets/SF-Pro-Display-Bold.otf');
@@ -29,37 +29,64 @@
     src: url('/assets/SF-Pro-Display-Semibold.otf');
 }
 
+
+/* EINA */
 @font-face{
     font-family: 'Eina-bold';
     src: url('/assets/Eina03-Bold.ttf');
-}
-.eina-bold{
-    font-family: 'Eina-bold';
 }
 
 @font-face{
     font-family: 'Eina-semibold';
     src: url('/assets/Eina03-Semibold.ttf');
 }
-.eina-semibold{
-    font-family: 'Eina-semibold';
-}
 
 @font-face{
     font-family: 'Eina-regular';
     src: url('/assets/Eina03-Regular.ttf');
-}
-.eina-regular{
-    font-family: 'Eina-regular';
 }
 
 @font-face{
     font-family: 'Eina-light';
     src: url('/assets/Eina03-Light.ttf');
 }
-.eina-light{
-    font-family: 'Eina-light';
+
+
+/* BARLOW */
+@font-face{
+    font-family: 'barlow-bold';
+    src: url('/assets/Barlow-Bold.ttf');
 }
+
+@font-face{
+    font-family: 'barlow-semibold';
+    src: url('/assets/Barlow-Semibold.ttf');
+}
+
+@font-face{
+    font-family: 'Barlow-regular';
+    src: url('/assets/Barlow-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'barlow-light';
+    src: url('/assets/Barlow-Light.ttf');
+}
+
+
+.text-bold{
+    font-family: 'eina-bold';
+}
+.text-semibold{
+    font-family: 'eina-semibold';
+}
+.text-regular{
+    font-family: 'eina-regular';
+}
+.text-thin{
+    font-family: 'eina-light';
+}
+
 
 .txt-90{
     font-size: 90%;
@@ -98,7 +125,7 @@
 }
 #nome{
     font-size: 400%;
-    font-family: 'Eina-bold';
+    /* font-family: 'Eina-bold'; */
     /* z-index: 999; */
 }
 #nome:hover{

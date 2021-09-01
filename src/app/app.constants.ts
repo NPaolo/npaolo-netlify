@@ -7,7 +7,8 @@ export const logos = [
         color: 'primary',
         hexcolor: '#3847A0',
         date: 'February 2021',
-        flip: 'inactive'
+        flip: 'inactive',
+        size: 'lg'
     },
     {
         title: 'Time To Marketing',
@@ -17,7 +18,8 @@ export const logos = [
         color: 'accent',
         hexcolor: '#FF4081',
         date: 'April 2021',
-        flip: 'inactive'
+        flip: 'inactive',
+        size: 'sm'
     },
     {
         title: 'Moka',
@@ -27,7 +29,8 @@ export const logos = [
         color: 'warn',
         hexcolor: '#F44335',
         date: 'July 2021',
-        flip: 'inactive'
+        flip: 'inactive',
+        size: 'sm'
     },
     {
         title: 'CatoCotuNardo',
@@ -37,9 +40,25 @@ export const logos = [
         color: 'warn',
         hexcolor: '#F44335',
         date: 'August 2021',
-        flip: 'inactive'
+        flip: 'inactive',
+        size: 'lg'
+    },
+    {
+        title: 'Al Circo Massimo',
+        description: 'TV show on Teleroma56',
+        image: 'assets/circomassimo.png',
+        url: 'https://www.facebook.com/catocotunardo',
+        color: 'warn',
+        hexcolor: '#F44335',
+        date: 'August 2021',
+        flip: 'inactive',
+        size: 'sm'
     }
 ]
+
+
+
+
 export const AVVOCATO = {
     title: 'Il mio avvocato',
     description: 'Online tool for legal assistance.',

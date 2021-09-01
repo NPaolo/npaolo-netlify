@@ -11,7 +11,7 @@
         <div class="col-12" style="z-index: 999 !important;">
             <span (click)="goHome()" class="header-span">
             <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome">aolo</span>
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome" class="text-bold">aolo</span>
             <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
             </span>
         </div>
@@ -39,17 +39,17 @@
 <div class="d-flex justify-content-center align-items-center">
     <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
         <div class="row" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
-            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center text-center left">
+            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center text-center left text-bold">
                 <h1>Front End Developer</h1>
             </div>
             <div class="col-lg-6 col-xs-12 right">
-                <div class="textTeach" style="font-family: 'Eina-bold';">
+                <div class="textTeach" class="text-bold">
                     <b>Angular Developer</b> at <b><a href="http://www.rotechnology.it/" target="_blank">RoTechnology</a></b>.<br>
-                    <span style="font-family: 'Eina-light';">Regular Contractor at <b>Accenture</b></span>
+                    <span class="text-thin">Regular Contractor at <b>Accenture</b></span>
                     <br><br>
-                    <span style="font-family: 'Eina-semibold';">Collaborating with Trevize s.r.l</span><br><br>
-                    <span style="font-family: 'Eina-light';">Design and Development of web-sites, web-apps and mobile applications.</span><br><br>
-                    <span style="font-family: 'Eina-semibold';">Skills : Angular, Ionic, NativeScript, Wordpress</span>
+                    <span class="text-semibold">Collaborating with Trevize s.r.l</span><br><br>
+                    <span class="text-thin">Design and Development of web-sites, web-apps and mobile applications.</span><br><br>
+                    <span class="text-semibold">Skills : Angular, Ionic, NativeScript, Wordpress</span>
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
 </div>
 
 
-    <div class="fixed-bottom d-flex justify-content-center pt-3 pb-1 eina-light txt-70">
+    <div class="fixed-bottom d-flex justify-content-center pt-3 pb-1 text-thin txt-70">
         Designed by Paolo Nazzaro
     </div>
 

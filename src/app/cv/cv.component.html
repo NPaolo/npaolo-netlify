@@ -12,27 +12,14 @@
         <div class="col-12" style="z-index: 999 !important;">
             <span (click)="goHome()" class="header-span">
             <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome">aolo</span>
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome" class="text-bold">aolo</span>
             <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
             </span>
         </div>
     </div>   
 
     <div class="row">
-        <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">
-            <!-- <mat-chip-list>
-                <div class="d-flex justify-content-center align-items-center">
-                    <mat-chip class="mat-elevation-z24">
-                        <mat-icon>navigate_before</mat-icon>
-                        Home
-                    </mat-chip>
-                </div>
-            </mat-chip-list> -->
-        </div>
         <div class="col-12 toggle-container" style="text-align: center;" >
-                <!-- <img src="assets/drop.png" alt="" id="mode" (click)="switchMode()" *ngIf="!mode">
-                <img src="assets/droplight.png" alt="" id="mode" (click)="switchMode()" *ngIf="mode"> -->
-                <!-- <span class="material-icons"  (click)="switchMode()">invert_colors</span> -->
                 <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
         </div>
     </div>
@@ -41,7 +28,7 @@
     <mat-card class="mat-elevation-z8 mt-4" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
         <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
             <div class="col-lg-6 col-xs-12 left">
-                <h1>Bio</h1>
+                <h1 class="text-bold">Bio</h1>
                 <img src="./assets/leaf.png" class="icon" alt="">
             </div>
             <div class="col-lg-6 col-xs-12 right">
@@ -58,7 +45,7 @@
     <mat-card class="mat-elevation-z24 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
     <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
         <div class="col-lg-6 col-xs-12 left">
-            <h1>Education & Training</h1>
+            <h1 class="text-bold">Education & Training</h1>
             <img src="./assets/pencil.png" class="icon" alt="">
         </div>
         <div class="col-lg-6 col-xs-12 right">
@@ -80,7 +67,7 @@
     <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
     <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
         <div class="col-lg-6 col-xs-12 left">
-            <h1>Work</h1>
+            <h1 class="text-bold">Work</h1>
             <img src="./assets/briefcase.png" class="icon" alt="">
         </div>
         <div class="col-lg-6 col-xs-12 right">
@@ -109,7 +96,7 @@
     <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
     <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
         <div class="col-lg-6 col-xs-12 left">
-            <h1>Projects</h1>
+            <h1 class="text-bold">Projects</h1>
             <img src="./assets/presentation.png" class="icon" alt="">
         </div>
         <div class="col-lg-6 col-xs-12 right">
@@ -129,7 +116,7 @@
     <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
     <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
         <div class="col-lg-6 col-xs-12 left">
-            <h1>Skills</h1>
+            <h1 class="text-bold">Skills</h1>
             <img src="./assets/diamond.png" class="icon" alt="">
         </div>
         <div class="col-lg-6 col-xs-12 right">
@@ -149,7 +136,7 @@
     <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
     <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
         <div class="col-lg-6 col-xs-12 left">
-            <h1>Interests</h1>
+            <h1 class="text-bold">Interests</h1>
             <img src="./assets/ball.png" class="icon" alt="">
         </div>
         <div class="col-lg-6 col-xs-12 right">
@@ -176,7 +163,7 @@
 
 </div>
 
-<div class="d-flex justify-content-center pt-3 pb-1 eina-light txt-70">
+<div class="d-flex justify-content-center pt-3 pb-1 text-thin txt-70">
     Designed by Paolo Nazzaro
 </div>
 

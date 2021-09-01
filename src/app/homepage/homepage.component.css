@@ -6,29 +6,6 @@
     transition-duration: 1s;
 }
 
-p{
-    font-family: 'Eina-light';
-    font-size: 40%;
-}
-
-/* fa-icon{
-    font-size: 60%;
-    color: black;    
-} */
-
-.contact{
-    font-family: 'SF-ultralight';
-    font-size: 40%;
-    vertical-align: middle;
-}
-
-#square {
-    text-align: center;
-    font-family: 'Eina-bold';
-    font-size: 300%;
-    padding-top: 5%;
-    height: 100%;
-}
 .voice{
     cursor: pointer;
     height: 30vh;
@@ -57,12 +34,6 @@ p{
     transition-duration: 1s; 
 }
 
-#rgbtxt{
-    font-family: 'Eina-bold';
-    font-size: 150%;
-    border-width: 1px solid black;
-}
-
 a{
     text-decoration: none;
 }
@@ -77,10 +48,6 @@ a{
     }
     #rgbimg{
         width: 8vw;
-    }
-    p{
-        font-family: 'Eina-light';
-        font-size: 40%;
     }
     /* .contatti{
         font-size: 40%;
@@ -138,20 +105,6 @@ mat-card{
 
 ::ng-deep .mat-chip-list-wrapper{
     justify-content: center !important;
-}
-
-mat-card-title {
-    font-family: 'Eina-bold';
-}
-
-mat-card-content{
-    font-family: 'Eina-light';
-    font-size: 100% !important;
-}
-
-mat-chip {
-    font-family: 'Eina-semibold';
-    cursor: pointer;
 }
 
 .bio-card {
