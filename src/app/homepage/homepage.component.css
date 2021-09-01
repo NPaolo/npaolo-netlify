@@ -132,7 +132,8 @@ mat-card{
 }
 
 .proj-card {
-    background-color: #e5ddf7; 
+    background-color: #e5ddf7;
+    height: fit-content;
 }
 .proj-chip {
     background-color: white; 
