@@ -9,13 +9,16 @@
 
     <div class="row" id="head">
         <div class="col-12" style="z-index: 999 !important;">
-            <span (click)="goHome()" class="header-span">
-            <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome" class="text-bold">aolo</span>
-            <!-- <span [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " style="font-size: 300%;" id="nome">paolo nazzaro</span> -->
+            <span class="header-span text-heavy" (click)="goHome()">
+            <!-- <img src="assets/pn.png" class="pn-logo" alt="">
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome"
+            class="text-bold">aolo</span> -->
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="nome">paolo</span>
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="cognome">nazzaro</span>
+            <span class="logo__cursor"></span>
             </span>
         </div>
-    </div>   
+    </div>    
 
     <div class="row">
         <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">

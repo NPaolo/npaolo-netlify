@@ -5,6 +5,10 @@ mat-card {
     /* box-shadow: 5px 5px 20px 0px #c8dcff !important; */
 }
 
+mat-chip-list {
+    justify-content: flex-start !important;
+}
+
 .container-fluid {
     height: 100vh !important;
 }

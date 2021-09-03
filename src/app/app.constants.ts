@@ -49,7 +49,7 @@ export const logos = [
         image: 'assets/circomassimo.png',
         url: 'https://www.facebook.com/catocotunardo',
         color: 'warn',
-        hexcolor: '#F44335',
+        hexcolor: '#8F1B4D',
         date: 'August 2021',
         flip: 'inactive',
         size: 'sm'
