@@ -98,7 +98,7 @@
     font-family: 'SF-regular';
 }
 .text-thin{
-    font-family: 'SF-light';
+    font-family: 'SF-light', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 

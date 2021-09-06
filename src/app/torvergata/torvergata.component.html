@@ -20,59 +20,54 @@
     </div>   
 
 <div class="row">
-    <!-- <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">
-        <span class="underlineShort">
-            <img src="assets/back.png" style="width: 1.7vw;" alt="">
-            Home
-        </span>
-    </div> -->
+
     <div class="col-12" style="text-align: center;" >
-                <!-- <img src="assets/drop.png" alt="" id="mode" (click)="switchMode()" *ngIf="!mode">
-                <img src="assets/droplight.png" alt="" id="mode" (click)="switchMode()" *ngIf="mode"> -->
-                <!-- <span class="material-icons"  (click)="switchMode()">invert_colors</span> -->
-                <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
+        <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
     </div>
 </div>
 
-<div class="d-flex justify-content-center align-items-center px-2 pt-3">
-    <mat-card class="mat-elevation-z12 w-100" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
-        <div class="row sezione d-flex justify-content-center align-items-center" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
-            <div class="col-lg-6 col-xs-12 d-flex justify-content-center">
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
+        <div class="d-flex card-content align-items-center p-4" [ngClass]="mode === false ? 'lightsez' : '' " >
+            <div class="px-3">
                 <img src="./assets/homeiphone.png" id="iphone" alt="">
             </div>
-            <div class="col-lg-6 col-xs-12 right">
-                <h1 id="torvergata">Tor Vergata 4 Foreigners</h1><br>
-                <span id="text" >
-                    <h4><b>Ionic</b> + <b>Angular</b> app</h4>
+            <div class="px-3">
+                <h1 class="text-bold">Tor Vergata 4 Foreigners</h1><br>
+                <span class="text-regular">
+                    <h4>Ionic + Angular app</h4>
                     <br><br>
-                    <h4><b>iOS</b> + <b>Android</b></h4>
+                    <h4>iOS + Android</h4>
                     <br><br>
-                    <h4><b>JWT</b> Authentication</h4>
+                    <h4>JWT Authentication</h4>
                     <br><br>
                 </span>
             </div>
         </div>
     </mat-card>
 </div>
-
-<div class="d-flex justify-content-center align-items-center px-2 pt-3 ">
-    <mat-card class="mat-elevation-z12 w-100 " [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
-        <div class="row sezione back d-flex justify-content-center align-items-center" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
-            <div class="col-lg-6 col-xs-12 d-flex justify-content-center">
-                <span id="text">
-                    <h4><b>PDF</b> + <b>Gallery</b> + <b>Camera</b><br> File Upload</h4>
+<div class="d-flex justify-content-center">
+    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
+        <div class="d-flex card-content align-items-center py-2" [ngClass]="mode === false ? 'lightsez' : '' " >
+            <div class="px-3 d-flex align-items-center">
+                <span class="text-regular">
+                    <h4>PDF + Gallery + Camera file upload</h4>
                     <br><br>
-                    <h4><b>Multilanguage</b> </h4>
+                    <h4>Multilanguage</h4>
                     <br><br>
-                    <h4>File <b>Download</b></h4>
+                    <h4>File Download</h4>
                     <br><br>
-                </span>            </div>
-            <div class="col-lg-6 col-xs-12 d-flex justify-content-center">
-                <img src="./assets/docsphone.png" id="iphone" alt="">
+                </span>
+            </div>
+            <div class="d-flex justify-content-around align-items-center" [ngClass]="mode === false ? 'lightsez' : '' " >
+                <div class="px-3">
+                    <img src="./assets/docsphone.png" id="iphone" alt="">
+                </div>
             </div>
         </div>
     </mat-card>
 </div>
+
 
 <div class="d-flex justify-content-center pt-3 pb-1 text-thin txt-70">
     Designed by Paolo Nazzaro

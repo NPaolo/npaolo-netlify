@@ -3,7 +3,5 @@ mat-card {
 }
 
 @media (max-width: 992px) {
-    .container-fluid {
-        height: 100vh !important;
-    }
+
 }

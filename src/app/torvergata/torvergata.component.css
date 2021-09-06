@@ -1,40 +1,17 @@
 mat-card {
     border-radius: 25px;
-    /* box-shadow: 5px 5px 20px 0px #e5ddf7 !important; */
+    width: min-content;
     margin-bottom: 3%;
 }
 
 #iphone {
-    width: 20vw;
-}
-
-#torvergata {
-    font-family: 'Eina-bold';
-    white-space: nowrap;
-}
-
-#text {
-    font-family: 'Eina-light';
-}
-b{
-    font-family: 'Eina-regular';
+    width: 16vw;
 }
 
 #footer{font-family: 'SF-light'; display: flex; justify-content: center; margin-top: 2%;}
 
-.features{
-    font-family: 'Eina-regular';
-    text-align: center;
-}
 
 @media (max-width: 992px){
-    #back{
-        display: none;
-    }
-    #rgb{
-        /* height: 5vh; */
-        width: 20vw;
-    }
     #iphone{
         width: 50vw;
         padding-top: 5%;
@@ -43,25 +20,16 @@ b{
     #mode{
         width: 8vw;
     }
-    #torvergata{
-        font-size: 150%;
+    .card-content {
+        justify-content: center;
+        flex-direction: column;
         text-align: center;
-        padding-top: 3%;
-    }
-    #templateWeb{
-        display: none;
-    }
-    #text {
-        text-align: center;
-    }
-    .back {
-        flex-direction: column-reverse !important;
     }
 }
 
   @media (min-width: 992px){
-      #templateMobile{
-          display: none;
-      }
+    .card-content {
+        justify-content: space-around;
+    }
   }
 

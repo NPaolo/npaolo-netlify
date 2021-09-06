@@ -22,19 +22,8 @@
 
     <div class="row">
         <div class="col-3" (click)="goHome()" style="cursor: pointer;" id="back">
-            <!-- <mat-chip-list>
-                <div class="d-flex justify-content-center align-items-center">
-                    <mat-chip class="mat-elevation-z24">
-                        <mat-icon>navigate_before</mat-icon>
-                        Home
-                    </mat-chip>
-                </div>
-            </mat-chip-list> -->
         </div>
         <div class="col-12 toggle-container" style="text-align: center;" >
-                <!-- <img src="assets/drop.png" alt="" id="mode" (click)="switchMode()" *ngIf="!mode">
-                <img src="assets/droplight.png" alt="" id="mode" (click)="switchMode()" *ngIf="mode"> -->
-                <!-- <span class="material-icons"  (click)="switchMode()">invert_colors</span> -->
                 <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
         </div>
     </div>
@@ -48,11 +37,12 @@
             <div class="col-lg-6 col-xs-12 right">
                 <div class="textTeach" class="text-bold">
                     <b>Angular Developer</b> at <b><a href="http://www.rotechnology.it/" target="_blank">RoTechnology</a></b>.<br>
-                    <span class="text-thin">Regular Contractor at <b>Accenture</b></span>
+                    <span class="text-semibold">Regular Contractor at <b>Accenture</b></span>
                     <br><br>
-                    <span class="text-semibold">Collaborating with Trevize s.r.l</span><br><br>
+                    <span class="text-regular">Collaborating with Trevize s.r.l</span><br><br>
                     <span class="text-thin">Design and Development of web-sites, web-apps and mobile applications.</span><br><br>
-                    <span class="text-semibold">Skills : Angular, Ionic, NativeScript, Wordpress</span>
+                    <span class="text-semibold">Skills</span><br>
+                    <span class="text-thin">  Angular, Ionic, NativeScript, Wordpress</span>
                 </div>
             </div>
         </div>
