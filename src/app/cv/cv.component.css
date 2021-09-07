@@ -47,16 +47,13 @@ mat-card {
     height: 1px;
     background-color: black;
 }
-#t4f{
-    cursor: pointer;
-}
+
 #t4f:hover{
     font-size: 110%;
     transition-duration: 0.5s;
 }
 
 .bi-arrow-right-circle-fill {
-    color: #3880ff;
     margin-left: .5em;
 }
 

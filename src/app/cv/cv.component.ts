@@ -70,11 +70,17 @@ animateBk(){
 }
 
 goHome(){
-  this.x.navigate(['/'])
+  this.x.navigate(['/']);
+  window.scrollTo(0, 0)
 }
 
 goTv(){
   this.x.navigate(['torvergata']);
+  window.scrollTo(0, 0)
+}
+
+goDesign(){
+  this.x.navigate(['logo-designer']);
   window.scrollTo(0, 0)
 }
 

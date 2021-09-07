@@ -87,7 +87,6 @@
 .text-heavy{
     font-family: 'SF-heavy';
 }
-
 .text-bold{
     font-family: 'SF-heavy';
 }
@@ -101,6 +100,9 @@
     font-family: 'SF-light', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.text-azure {
+    color: #3880ff;
+}
 
 .txt-90{
     font-size: 90%;
@@ -124,8 +126,13 @@
     font-size: 30%;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 mat-chip {
     font-family: 'SF-bold' !important;
+    cursor: pointer !important;
 }
 
 .row {

@@ -34,10 +34,10 @@ export class LogoDesignerComponent implements OnInit {
   ngOnInit(): void {
     if(this.ts.modeBool === true) {
       this.mode = true;
-      this.T2M.image = 'assets/t2m-dark.png';
+      this.logos.find(element => element.title === 'Time To Marketing').image = 'assets/t2m-dark.png'
     } else { 
       this.mode = false;
-      this.T2M.image = 'assets/t2m.png';
+      this.logos.find(element => element.title === 'Time To Marketing').image = 'assets/t2m.png'
     }
   }
 
@@ -60,5 +60,5 @@ export class LogoDesignerComponent implements OnInit {
 }
 
 goHome(){
-  this.x.navigate(['/'])
+  this.x.navigate(['/']);
 }}

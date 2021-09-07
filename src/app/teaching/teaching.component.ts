@@ -27,6 +27,6 @@ export class TeachingComponent implements OnInit {
 }
 
 goHome(){
-  this.x.navigate(['/'])
+  this.x.navigate(['/']);
 }
 }
