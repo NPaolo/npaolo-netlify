@@ -55,6 +55,11 @@ mat-card {
     transition-duration: 0.5s;
 }
 
+.bi-arrow-right-circle-fill {
+    color: #3880ff;
+    margin-left: .5em;
+}
+
 
 @media (max-width: 992px){
     #back{

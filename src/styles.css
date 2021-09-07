@@ -252,7 +252,7 @@ mat-card{
         font-size: 200%;
     }
     .footer{
-        position:fixed; 
+        position: block; 
         bottom: 0%; 
         z-index: 999 !important; 
         width: 100%;
@@ -260,6 +260,7 @@ mat-card{
 
 .container-fluid {
     z-index: 1;
+    min-height: -webkit-fill-available;
 }
 
 html,body{

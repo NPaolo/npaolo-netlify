@@ -74,7 +74,8 @@ goHome(){
 }
 
 goTv(){
-  this.x.navigate(['torvergata'])
+  this.x.navigate(['torvergata']);
+  window.scrollTo(0, 0)
 }
 
 }

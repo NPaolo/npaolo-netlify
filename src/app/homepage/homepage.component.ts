@@ -42,19 +42,23 @@ constructor(private x : Router, private ts: ThemeService, public dialog: MatDial
     }
 
   goCV(){
-    this.x.navigate(['cv'])
+    this.x.navigate(['cv']);
+    window.scrollTo(0, 0)
   }
 
   goWork(){
-    this.x.navigate(['work'])
+    this.x.navigate(['work']);
+    window.scrollTo(0, 0)
   }
 
   goTv(){
-    this.x.navigate(['torvergata'])
+    this.x.navigate(['torvergata']);
+    window.scrollTo(0, 0)
   }
 
   goColors(){
-    this.x.navigate(['colors'])
+    this.x.navigate(['colors']);
+    window.scrollTo(0, 0)
   }
 
   openDialog(title: string, description: string, image: string, url: string, color: string) {
