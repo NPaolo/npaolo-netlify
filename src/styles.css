@@ -131,7 +131,7 @@
 }
 
 mat-chip {
-    font-family: 'SF-bold' !important;
+    font-family: 'SF-bold', sans-serif !important;
     cursor: pointer !important;
 }
 
