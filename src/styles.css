@@ -85,19 +85,19 @@
 }
 
 .text-heavy{
-    font-family: 'SF-heavy';
+    font-family: 'SF-heavy', sans-serif;
 }
 .text-bold{
-    font-family: 'SF-heavy';
+    font-family: 'SF-heavy', sans-serif;
 }
 .text-semibold{
-    font-family: 'SF-semibold';
+    font-family: 'SF-semibold', sans-serif;
 }
 .text-regular{
-    font-family: 'SF-regular';
+    font-family: 'SF-regular', sans-serif;
 }
 .text-thin{
-    font-family: 'SF-light', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'SF-light', sans-serif;
 }
 
 .text-azure {

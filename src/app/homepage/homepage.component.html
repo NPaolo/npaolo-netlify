@@ -38,7 +38,7 @@
                     <mat-chip-list>
                         <div class="d-flex justify-content-center text-center flex-column">
                             <!-- <b class="text-black text-thin" [ngClass]="mode === false ? '' : 'testodark' ">22 / 10 / 1996</b> -->
-                        <mat-chip class="mat-elevation-z6 text-semibold" 
+                        <mat-chip class="mat-elevation-z6" 
                         [ngClass]="mode === false ? 'bio-chip' : 'bio-chip-dark'"
                         (click)="goCV()">Curriculum Vitae</mat-chip>
                         </div>
@@ -53,14 +53,14 @@
             </mat-card-title>
             <mat-card-content class="text-thin">
                     <mat-chip-list>
-                        <div class="d-flex justify-content-center text-center flex-wrap">
-                        <mat-chip class="mat-elevation-z6 text-semibold" (click)="goWork()"
+                        <div class="d-flex justify-content-center text-center flex-wrap text-semibold">
+                        <mat-chip class="mat-elevation-z6" (click)="goWork()"
                         [ngClass]="mode === false ? 'work-chip' : 'work-chip-dark'">Front End Developer
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6 text-semibold" routerLink="teaching"
+                        <mat-chip class="mat-elevation-z6" routerLink="teaching"
                         [ngClass]="mode === false ? 'work-chip' : 'work-chip-dark'">Teaching Assistant
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6 text-semibold" routerLink="logo-designer"
+                        <mat-chip class="mat-elevation-z6" routerLink="logo-designer"
                         [ngClass]="mode === false ? 'work-chip' : 'work-chip-dark'">Freelance Logo Designer
                         </mat-chip>
                         </div>
@@ -78,16 +78,16 @@
             <mat-card-content class="text-thin">
                     <mat-chip-list>
                         <div class="d-flex justify-content-center text-center flex-wrap">
-                        <mat-chip class="mat-elevation-z6 text-semibold" (click)="goTv()"
+                        <mat-chip class="mat-elevation-z6" (click)="goTv()"
                         [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">Tor Vergata for Foreigners
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6 text-semibold"
+                        <mat-chip class="mat-elevation-z6"
                         [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
                             <a href="https://flyeaa.com/" target="_blank" style="color: inherit !important;">
                                 European Aviation Academy
                             </a>
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6 text-semibold"
+                        <mat-chip class="mat-elevation-z6"
                         [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'" *ngFor="let logo of logos; let i=index">
                             <a (click)="openDialog(logo.title, logo.description, logo.image, logo.url, logo.color)"
                              style="color: inherit !important;">
@@ -107,18 +107,18 @@
             <mat-card-content class="text-thin">
                     <mat-chip-list>
                         <div class="d-flex justify-content-center text-center flex-wrap">
-                        <mat-chip class="mat-elevation-z6 text-semibold"
+                        <mat-chip class="mat-elevation-z6"
                         [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
                             <a href="mailto:paolonazzaro23@gmail.com" >
                                 <i class="bi bi-envelope-fill"></i>                          
                             </a>
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6 text-semibold"
+                        <mat-chip class="mat-elevation-z6"
                         [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">                
                             <a href="https://www.linkedin.com/in/paolonazzaro23/" target="_blank">
                                 <i class="bi bi-linkedin"></i>                            </a>
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6 text-semibold"
+                        <mat-chip class="mat-elevation-z6"
                         [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
                             <a href="https://www.instagram.com/paolonazzaro.png/" target="_blank">
                                 <i class="bi bi-instagram"></i>                            </a>
@@ -132,7 +132,7 @@
 
 <div class="footer text-center">
     <div class="d-flex justify-content-center " style="z-index: 999 !important;">
-            <mat-chip (click)="goColors()" class="mat-elevation-z6 text-semibold mt-2"
+            <mat-chip (click)="goColors()" class="mat-elevation-z6 mt-2"
             [ngStyle]="{'background-color' : mode ? '#212E3C' : 'whitesmoke', 'color' : mode ? 'whitesmoke' : '#212E3C'}">
                 Colors
             </mat-chip>
