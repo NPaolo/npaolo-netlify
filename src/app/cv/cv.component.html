@@ -1,181 +1,148 @@
 <style type="text/css">
     .sfondolight { background-color: white }
-  .sfondodark { background-color: #222f3e !important; color: whitesmoke !important; }
+    .sfondodark { background-color: #222f3e !important; color: whitesmoke !important; }
     .testolight     { color: black !important; }
     .testodark      { color: whitesmoke !important; }
     .shadowdark     { box-shadow: -10px 15px 40px -20px #c8dcff; }
-    .cardark        { background-color: #222f3e; background-blend-mode: darken; color: whitesmoke;}
   </style>
     
 <div  class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
-    <div class="row" id="head">
-        <div class="col-12" style="z-index: 999 !important;">
-            <span class="header-span text-heavy" (click)="goHome()">
-            <!-- <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome"
-            class="text-bold">aolo</span> -->
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="nome">paolo</span>
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="cognome">nazzaro</span>
-            <span class="logo__cursor"></span>
-            </span>
-        </div>
-    </div>   
 
-    <div class="row">
-        <div class="col-12 toggle-container" style="text-align: center;" >
-                <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
-        </div>
-    </div>
+    <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
-<div class="d-flex justify-content-center align-items-center">
-    <mat-card class="mat-elevation-z8 mt-4" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-        <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
-            <div class="col-lg-6 col-xs-12 left">
-                <h1 class="text-bold">Bio</h1>
-                <img src="./assets/leaf.png" class="icon" alt="">
-            </div>
-            <div class="col-lg-6 col-xs-12 right">
-                Name  <span class="impo">Paolo Nazzaro</span> <br>
-                Date of Birth  <span class="impo">22 / 10 / 1996</span> <br>
-                Place of Birth  <span class="impo">Rome</span> <br>
-                Email  <span class="impo">paolonazzaro23@gmail.com</span>
-            </div>
+<div class="d-flex justify-content-center align-items-center mt-3">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 bio" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
+            <h1 class="text-bold">Bio</h1>
+            <mat-icon class="icon">fingerprint</mat-icon>
+        </div>
+        <div class="responsive-width text-thin txt-90">
+            Name  <b>Paolo Nazzaro</b> <br>
+            Date of Birth  <b>22 / 10 / 1996</b> <br>
+            Place of Birth  <b>Rome</b> <br>
+            Email  <b>paolonazzaro23@gmail.com</b>
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z24 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
-        <div class="col-lg-6 col-xs-12 left">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
             <h1 class="text-bold">Education & Training</h1>
-            <img src="./assets/pencil.png" class="icon" alt="">
+            <mat-icon class="icon">menu_book</mat-icon>
         </div>
-        <div class="col-lg-6 col-xs-12 right">
-            <span class="impo">Languages in the Information Society Degree</span><br>
-            <span class="when">2015-2020</span><br>
-            <span class="info"> University of Rome Tor Vergata <br>
+        <div class="responsive-width text-thin text-grey">
+            <b>Languages in the Information Society Degree</b><br>
+            <span class="text-regular txt-80">2015-2020</span><br>
+            <span class="txt-90"> University of Rome Tor Vergata <br>
             Graduated with 110/110 with the thesis "Font's analysis and use in web communication". </span><br>
-            <span class="impo">European project EU-MADE4LL</span> <br>
-            <span class="when">2017</span> <br>
-            <span class="info">Production of a corporate video regarding the University of Rome Tor Vergata. </span><br>
-            <span class="impo">Scientific High School Degree</span> <br>
-            <span class="when">2010-2015</span>
+            <b>European project EU-MADE4LL</b> <br>
+            <span class="text-regular txt-80">2017</span> <br>
+            <span class="txt-90">Production of a corporate video regarding the University of Rome Tor Vergata. </span><br>
+            <b>Scientific High School Degree</b> <br>
+            <span class="text-regular txt-80">2010-2015</span>
         </div>
-    </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
-        <div class="col-lg-6 col-xs-12 left">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
             <h1 class="text-bold">Work</h1>
-            <img src="./assets/briefcase.png" class="icon" alt="">
+            <mat-icon class="icon">work</mat-icon>
         </div>
-        <div class="col-lg-6 col-xs-12 right">
-            <span class="impo">Front End Developer at RoTechnology</span><br>
-            <span class="when">2020-now</span><br>
-            <span class="info">Regular Contractor at <b>Accenture</b> for Angular/Ionic based project.</span><br>
-            <span class="impo">Web Developing Assistant at Tor Vergata University</span> <br>
-            <span class="when">2019-now</span> <br>
-            <span class="info">University Tutor for HTML + CSS + JavaScript based courses.</span><br>
-            <span class="impo">Front End Developer at Trevize s.r.l</span><br>
-            <span class="when">2019-2020</span><br>
-            <span class="info">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span><br>
-            <span class="impo">Web Developing Teaching Assistant at Betacom</span> <br>
-            <span class="when">2019</span> <br>
-            <span class="info">Teaching Assistant for Angular based courses.</span><br>
-            <span class="impo">Journalist at Quotidiano del Lazio</span> <br>
-            <span class="when">2018-2020</span> <br>
-            <span class="impo">Office Clerk at Tor Vergata University</span> <br>
-            <span class="when">2018</span>
+        <div class="responsive-width text-thin text-grey">
+            <b>Front End Developer at RoTechnology</b><br>
+            <span class="text-regular txt-80">2020-now</span><br>
+            <span class="txt-90">Regular Contractor at Accenture for Angular/Ionic based project.</span><br>
+            <b>Web Developing Assistant at Tor Vergata University</b> <br>
+            <span class="text-regular txt-80">2019-now</span> <br>
+            <span class="txt-90">University Tutor for HTML + CSS + JavaScript based courses.</span><br>
+            <b>Front End Developer at Trevize s.r.l</b><br>
+            <span class="text-regular txt-80">2019-2020</span><br>
+            <span class="txt-90">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span><br>
+            <b>Web Developing Teaching Assistant at Betacom</b> <br>
+            <span class="text-regular txt-80">2019</span> <br>
+            <span class="txt-90">Teaching Assistant for Angular based courses.</span><br>
+            <b>Journalist at Quotidiano del Lazio</b> <br>
+            <span class="text-regular txt-80">2018-2020</span> <br>
+            <b>Office Clerk at Tor Vergata University</b> <br>
+            <span class="text-regular txt-80">2018</span>
         </div>
-    </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
-        <div class="col-lg-6 col-xs-12 left">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
             <h1 class="text-bold">Projects</h1>
-            <img src="./assets/presentation.png" class="icon" alt="">
+            <mat-icon class="icon">devices</mat-icon>
         </div>
-        <div class="col-lg-6 col-xs-12 right">
-            <span class="impo" id="eaa">Al Circo Massimo </span>-
-            <span class="info"> <a href="https://www.youtube.com/channel/UCFW7vR1zutzUxgSP_a_JuYQ" target="_blank"> alcircomassimo</a> <br>
-            <span class="when">2021</span> <br>
+        <div class="responsive-width text-thin text-grey">
+            <b>Al Circo Massimo </b>-
+            <span class="txt-90"> <a href="https://www.youtube.com/channel/UCFW7vR1zutzUxgSP_a_JuYQ" target="_blank"> alcircomassimo</a> <br>
+            <span class="text-regular txt-80">2021</span> <br>
                 TV Show logo designer.
             </span><br>
 
-            <span class="impo" id="eaa">Il mio avvocato </span>-
-            <span class="info"> <a href="https://ilmioavvocato.online/" target="_blank"> ilmioavvocato.online</a><br>
-            <span class="when">2021</span> <br>
+            <b>Il mio avvocato </b>-
+            <span class="txt-90"> <a href="https://ilmioavvocato.online/" target="_blank"> ilmioavvocato.online</a><br>
+            <span class="text-regular txt-80">2021</span> <br>
                 Logo designer for a legal assistance online tool
             </span><br>
 
-            <span class="impo pointer" id="t4f" (click)="goTv()">Tor Vergata 4 Foreigners</span>
-            <i class="bi bi-arrow-right-circle-fill ml-1 text-azure"></i><br>
-            <span class="when">2020</span><br>
-            <span class="info">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students. </span><br>
+            <b class="text-semibold pointer" id="t4f" (click)="goTv()">Tor Vergata 4 Foreigners</b>
+            <i class="bi bi-arrow-right-circle-fill ml-1 text-azure pointer" (click)="goTv()"></i><br>
+            <span class="text-regular txt-80">2020</span><br>
+            <span class="txt-90">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students. </span><br>
 
-            <span class="impo" id="eaa">European Aviation Academy </span>-
-            <span class="info"> <a href="https://flyeaa.com/" target="_blank"> flyeaa.com</a><br>
-            <span class="when">2020</span> <br>
+            <b>European Aviation Academy </b>-
+            <span class="txt-90"> <a href="https://flyeaa.com/" target="_blank"> flyeaa.com</a><br>
+            <span class="text-regular txt-80">2020</span> <br>
                 Elementor + Wordpress based web site 
             </span><br>
         </div>
-    </div>
-    </mat-card>
-</div>
-<div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z20 mt-2 text-thin" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-        <div class="row">
-            <div class="col-12">
-                You can find all of my design projects in 
-                <a class="text-bold text-azure pointer" (click)="goDesign()">this section</a>.
-            </div>
-        </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
-        <div class="col-lg-6 col-xs-12 left">
+    <mat-card class="mat-elevation-z8 mt-2 text-thin d-flex justify-content-center txt-90" [ngClass]="mode === false ? '' : 'cardark' " >
+        You can find all of my design projects in<a class="text-bold text-azure pointer" (click)="goDesign()"> this section</a>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
             <h1 class="text-bold">Skills</h1>
-            <img src="./assets/diamond.png" class="icon" alt="">
+            <mat-icon class="icon">diamond</mat-icon>
         </div>
-        <div class="col-lg-6 col-xs-12 right">
-            <span class="impo">Developing</span> <br>
-            <span class="info">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress </span><br>
-            <span class="impo">Design</span> <br>
-            <span class="topic">Logo / Icon Design</span><br>
-            <span class="moreinfo">Illustrator, Photoshop</span><br>
-            <span class="impo">Languages</span> <br>
-            <span class="info">English C1, German B1</span><br>
+        <div class="responsive-width text-thin text-grey">
+            <b>Developing</b> <br>
+            <span class="txt-90">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress </span><br>
+            <b>Design</b> <br>
+            <span class="text-regular txt-90">Logo / Icon Design</span><br>
+            <span class="txt-90">Illustrator, Photoshop</span><br>
+            <b>Languages</b> <br>
+            <span class="txt-90">English C1, German B1</span><br>
         </div>
-    </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z20 mt-2" [ngClass]="mode === false ? '' : 'cardark' " matRipple>
-    <div class="row sezione" [ngClass]="mode === false ? 'lightsez' : '' ">
-        <div class="col-lg-6 col-xs-12 left">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 interests" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
             <h1 class="text-bold">Interests</h1>
-            <img src="./assets/ball.png" class="icon" alt="">
+            <mat-icon class="icon">sports_basketball</mat-icon>
         </div>
-        <div class="col-lg-6 col-xs-12 right">
-            <span class="impo">Design</span> <br>
-            <span class="info">Creation of minimal graphic contents</span><br>
-            <span class="impo">Sports</span> <br>
-            <span class="topic">Basketball</span><br>
-            <span class="moreinfo">Playing since 2002</span><br>
-            <span class="topic">Soccer</span> <br>
+        <div class="responsive-width text-thin text-grey">
+            <b>Design</b> <br>
+            <span class="txt-90">Creation of minimal graphic contents</span><br>
+            <b>Sports</b> <br>
+            <span class="text-regular txt-90">Basketball</span><br>
+            <span class="txt-90">Playing since 2002</span><br>
+            <span class="text-regular txt-90">Soccer</span> <br>
         </div>
-    </div>
     </mat-card>
 </div>
 

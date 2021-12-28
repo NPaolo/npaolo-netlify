@@ -48,31 +48,13 @@ stateBk = 'small'
     console.log(this.mode)
   }
 
-  switchMode() {
-    this.ts.switchMode();
-    this.mode = this.ts.modeBool;
-    console.log(this.mode)
-}
+  setMode(event) {
+    this.mode = event;
+  }
 
   downloadPdf(pdfUrl: string, pdfName: string ) {
     FileSaver.saveAs(pdfUrl, pdfName);
   }
-
-animateDeg() {
-  this.stateDeg = (this.stateDeg === 'small' ? 'large' : 'small')
-}
-animateEu(){
-  this.stateEu = (this.stateEu === 'small' ? 'medium' : 'small')
-}
-animateBk(){
-  this.stateBk = (this.stateBk === 'small' ? 'short' : 'small')
-
-}
-
-goHome(){
-  this.x.navigate(['/']);
-  window.scrollTo(0, 0)
-}
 
 goTv(){
   this.x.navigate(['torvergata']);

@@ -7,48 +7,24 @@
 
 <div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
 
-    <div class="row" id="head">
-        <div class="col-12" style="z-index: 999 !important;">
-            <span class="header-span text-heavy" (click)="goHome()">
-            <!-- <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome"
-            class="text-bold">aolo</span> -->
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="nome">paolo</span>
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="cognome">nazzaro</span>
-            <span class="logo__cursor"></span>
-            </span>
-        </div>
-    </div>    
+    <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
-    <div class="row">
-        <div class="col-3 pointer" (click)="goHome()" id="back">
+<div class="d-flex justify-content-center align-items-center mt-3">
+    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width padding">
+            <h1 class="text-bold">Frontend Developer</h1>
         </div>
-        <div class="col-12 toggle-container" style="text-align: center;" >
-                <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
-        </div>
-    </div>
-
-<div class="d-flex justify-content-center align-items-center">
-    <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
-        <div class="row" [ngClass]="mode === false ? 'lightsez' : '' "  style="margin-top: 2%;">
-            <div class="col-lg-6 col-xs-12 d-flex align-items-center justify-content-center text-center left text-bold">
-                <h1>Front End Developer</h1>
-            </div>
-            <div class="col-lg-6 col-xs-12 right">
-                <div class="textTeach" class="text-bold">
-                    <b>Angular Developer</b> at <b><a href="http://www.rotechnology.it/" target="_blank">RoTechnology</a></b>.<br>
-                    <span class="text-semibold">Regular Contractor at <b>Accenture</b></span>
-                    <br><br>
-                    <span class="text-regular">Collaborating with Trevize s.r.l</span><br><br>
-                    <span class="text-thin">Design and Development of web-sites, web-apps and mobile applications.</span><br><br>
-                    <span class="text-semibold">Skills</span><br>
-                    <span class="text-thin">  Angular, Ionic, NativeScript, Wordpress</span>
-                </div>
-            </div>
+        <div class="responsive-width txt-90">
+            <b>Angular Developer</b> at <b><a href="http://www.rotechnology.it/" target="_blank">RoTechnology</a></b>.<br>
+            <b>Regular Contractor at Accenture</b>
+            <br><br>
+            <span class="text-regular">Collaborating with Trevize s.r.l</span><br><br>
+            <span class="text-thin">Design and Development of web-sites, web-apps and mobile applications.</span><br><br>
+            <b>Skills</b><br>
+            <span class="text-thin">  Angular, Ionic, NativeScript, Wordpress</span>
         </div>
     </mat-card>
 </div>
-
 
     <div class="fixed-bottom d-flex justify-content-center pt-3 pb-1 text-thin txt-70">
         Designed by Paolo Nazzaro

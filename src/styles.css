@@ -90,7 +90,7 @@
 .text-bold{
     font-family: 'SF-heavy', sans-serif;
 }
-.text-semibold{
+.text-semibold, b{
     font-family: 'SF-semibold', sans-serif;
 }
 .text-regular{
@@ -102,6 +102,9 @@
 
 .text-azure {
     color: #3880ff;
+}
+.text-grey {
+    color: grey;
 }
 
 .txt-90{
@@ -249,8 +252,18 @@ mat-card{
     .container-fluid {
         height: fit-content !important;
     }
+    .responsive-width {
+        width: 100%;
+        text-align: left !important;
+    }
+    .mat-elevation-z8 {
+        flex-direction: column;
+    }
 }
 @media(min-width: 993px) {
+    .padding {
+        padding: 2em;
+    }
     .container-fluid {
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -273,7 +286,9 @@ mat-card{
 html,body{
     height: 100vh;
 }
-
+.responsive-width {
+    width: 50%;
+}
 }
 
 .logo__cursor {
@@ -293,3 +308,23 @@ html,body{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.testolight     { color: black !important; }
+.testodark      { color: whitesmoke !important; }
+.sfondolight { background-color: white }
+.sfondodark { background-color: #222f3e; color: whitesmoke; }
+.shadowdark     { box-shadow: -10px 15px 40px -20px #c8dcff; }
+.cardark        { background-blend-mode: darken; }
+
+.cardark {
+    background-color: #222f3e; 
+    background-blend-mode: darken; 
+    color: whitesmoke !important;
+}
+.cardark b {
+    color: whitesmoke !important;
+}
+.cardark span {
+    color: lightgray !important;
+}

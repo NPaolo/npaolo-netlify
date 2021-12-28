@@ -48,17 +48,13 @@ export class LogoDesignerComponent implements OnInit {
     this.logos[index].flip = (this.logos[index].flip == 'inactive') ? 'active' : 'inactive';
   }
 
-  switchMode() {
-    this.ts.switchMode();
-    this.mode = this.ts.modeBool;
+  setMode(event) {
+    this.mode = event;
     if (this.mode === true) {
       this.logos.find(logo => logo.title === 'Time To Marketing').image = 'assets/t2m-dark.png';
     } else {
       this.logos.find(logo => logo.title === 'Time To Marketing').image = 'assets/t2m.png';
     }
-    console.log(this.mode)
-}
+  }
 
-goHome(){
-  this.x.navigate(['/']);
-}}
+}

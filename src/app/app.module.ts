@@ -28,6 +28,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 // ANALYTICS
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     LogoDesignerComponent,
     TeachingComponent,
     TorvergataComponent,
-    WorkComponent
+    WorkComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

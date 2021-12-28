@@ -11,9 +11,6 @@ mat-card {
     width: 45%;
 }
 
-/* .container-fluid {
-    height: 100vh !important;
-} */
 
 @media (max-width: 992px){
     .web-projects {
@@ -50,7 +47,6 @@ mat-card {
     mat-card {
         max-width: 70%;
     }
-
 }
 
 .tp-box {

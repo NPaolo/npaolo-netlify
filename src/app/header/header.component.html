@@ -1,0 +1,12 @@
+<div class="d-flex text-center flex-column">
+    <div>
+        <span class="header-span text-heavy" (click)="goHome()">
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="nome">paolo</span>
+            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="cognome">nazzaro</span>
+            <span class="logo__cursor"></span>
+        </span>
+    </div>
+    <div class="toggle-container text-center">
+        <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
+    </div>
+</div>

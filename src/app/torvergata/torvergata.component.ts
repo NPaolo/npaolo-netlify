@@ -20,14 +20,8 @@ mode: boolean;
     console.log(this.mode)
   }
 
-  switchMode() {
-    this.ts.switchMode();
-    this.mode = this.ts.modeBool;
-    console.log(this.mode)
-  }
-
-  goHome(){
-    this.x.navigate(['/'])
+  setMode(event) {
+    this.mode = event;
   }
 
 }

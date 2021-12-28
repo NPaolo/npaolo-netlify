@@ -28,10 +28,8 @@ ngOnInit(): void {
   console.log(this.mode)
 }
 
-switchMode() {
-  this.ts.switchMode();
-  this.mode = this.ts.modeBool;
-  console.log(this.mode)
+setMode(event) {
+  this.mode = event;
 }
 
   copyMessage(val: string){
@@ -48,8 +46,6 @@ switchMode() {
     document.body.removeChild(selBox);
   }
 
-  goHome(){
-    this.x.navigate(['/'])
-  }
+
 
 }

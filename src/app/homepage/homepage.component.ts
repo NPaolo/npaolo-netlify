@@ -34,12 +34,9 @@ constructor(private x : Router, private ts: ThemeService, public dialog: MatDial
     console.log(this.mode)
   }
 
-  switchMode() {
-    // this.mode = !this.mode;
-    this.ts.switchMode();
-    this.mode = this.ts.modeBool;
-    console.log(this.mode)
-    }
+  setMode(event) {
+    this.mode = event;
+  }
 
   goCV(){
     this.x.navigate(['cv']);

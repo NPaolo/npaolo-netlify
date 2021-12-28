@@ -6,28 +6,11 @@
   </style>
 
 <div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
-    <div class="row" id="head">
-        <div class="col-12" style="z-index: 999 !important;">
-            <span class="header-span text-heavy" (click)="goHome()">
-            <!-- <img src="assets/pn.png" class="pn-logo" alt="">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " style="font-size: 300%;" id="nome"
-            class="text-bold">aolo</span> -->
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="nome">paolo</span>
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="cognome">nazzaro</span>
-            <span class="logo__cursor"></span>
-            </span>
-        </div>
-    </div>   
 
-<div class="row">
-
-    <div class="col-12" style="text-align: center;" >
-        <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
-    </div>
-</div>
+    <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
+    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
         <div class="d-flex card-content align-items-center p-4" [ngClass]="mode === false ? 'lightsez' : '' " >
             <div class="px-3">
                 <img src="./assets/homeiphone.png" id="iphone" alt="">
@@ -47,7 +30,7 @@
     </mat-card>
 </div>
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple>
+    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
         <div class="d-flex card-content align-items-center py-2" [ngClass]="mode === false ? 'lightsez' : '' " >
             <div class="px-3 d-flex align-items-center">
                 <span class="text-regular">
