@@ -8,17 +8,11 @@ mat-card {
     width: 16vw;
 }
 
-#footer{font-family: 'SF-light'; display: flex; justify-content: center; margin-top: 2%;}
-
-
 @media (max-width: 992px){
     #iphone{
         width: 50vw;
         padding-top: 5%;
         padding-bottom: 5%;
-    }
-    #mode{
-        width: 8vw;
     }
     .card-content {
         justify-content: center;

@@ -83,22 +83,24 @@
             <mat-card-content class="text-thin">
                     <mat-chip-list>
                         <div class="d-flex justify-content-center text-center flex-wrap">
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
                             <a href="mailto:paolonazzaro23@gmail.com" >
-                                <i class="bi bi-envelope-fill"></i>                          
+                                <mat-chip class="mat-elevation-z6"
+                                [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </mat-chip>
                             </a>
-                        </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">                
                             <a href="https://www.linkedin.com/in/paolonazzaro23/" target="_blank">
-                                <i class="bi bi-linkedin"></i>                            </a>
-                        </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
+                                <mat-chip class="mat-elevation-z6"
+                                [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">                
+                                    <i class="bi bi-linkedin"></i>
+                                </mat-chip>
+                            </a>
                             <a href="https://www.instagram.com/paolonazzaro.png/" target="_blank">
-                                <i class="bi bi-instagram"></i>                            </a>
-                        </mat-chip>
+                                <mat-chip class="mat-elevation-z6"
+                                [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
+                                    <i class="bi bi-instagram"></i>
+                                </mat-chip>
+                            </a>
                         </div>
                     </mat-chip-list>                      
             </mat-card-content>
@@ -120,5 +122,3 @@
 </div>
 
 </div>
-
-

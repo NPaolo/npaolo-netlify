@@ -14,3 +14,7 @@
 a {
     color: white;
 }
+
+::ng-deep.mat-dialog-container {
+    border-radius: 10px !important;
+}

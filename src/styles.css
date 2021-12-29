@@ -143,111 +143,21 @@ mat-chip {
     margin-right: unset !important;
 }
 
-#head {
-    text-align: center;
-    padding-top: 2%;
-    /* z-index: 999; */
-}
-.header-span {
-    cursor: pointer;
-}
-
-#nome, #cognome{
-    font-size: 300%;
-    /* font-family: 'Eina-bold'; */
-    /* z-index: 999; */
-}
-#nome{
-    color: #8C8C8D !important;
-}
-.pn-logo {
-    width: 4%;
-    z-index: 999;
-}
-.toggle-container{
-    z-index: 999;
-    cursor: pointer;
-}
-
-#mode {
-    width: 4vw;
-}
-#mode:hover{
-    opacity: 70%;
-    cursor: pointer;
-    transition-duration: 0.5s;
-    transform: rotate(180deg);
-}
-
-
-#pn {
-    font-family: 'SF-bold';
-    font-size: 400%;
-    letter-spacing: 2px;
-}
-
-#menu {
-    font-family: 'SF-regular';
-    font-size: 250%;
-    /* letter-spacing: 2px; */
-    text-align: center;
-    height: 50vh;
-}
-
-
 .material-icons {
     cursor: pointer;
 }
-.material-icons:hover{
+.material-icons:hover {
     opacity: 0.5;
     transition-duration: 0.3s;
 }
 
-.underline:after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    display: block;
-    background: white;
-    transition: 300ms;
-
-}
-  
-.underline:hover:after {
-    width: 75%;
-  }
-
-  a{
+a {
     text-decoration: none;
 }
 
-mat-card{
-    z-index: 999;
-}
-
-
-
-@media (max-width: 992px){
-    #nome, #cognome{
-        font-size: 260%;
-    }
-    .pn-logo {
-        width: 40px;
-    }
-    #mode{
-        width: 8vw;
-    }
-    .title{
-        font-size: 70%;
-    }
+@media (max-width: 992px) {
     .material-icons{
         font-size: 400%;
-    }
-    .area {
-        display: none;
-    }
-    .circles{
-        display: none;
     }
     .container-fluid {
         height: fit-content !important;
@@ -260,6 +170,7 @@ mat-card{
         flex-direction: column;
     }
 }
+
 @media(min-width: 993px) {
     .padding {
         padding: 2em;
@@ -277,18 +188,16 @@ mat-card{
         z-index: 999 !important; 
         width: 100%;
     }
-
-.container-fluid {
-    z-index: 1;
-    min-height: -webkit-fill-available;
-}
-
-html,body{
-    height: 100vh;
-}
-.responsive-width {
-    width: 50%;
-}
+    .container-fluid {
+        z-index: 1;
+        min-height: -webkit-fill-available;
+    }
+    html,body{
+        height: 100vh;
+    }
+    .responsive-width {
+        width: 50%;
+    }
 }
 
 .logo__cursor {
@@ -304,11 +213,10 @@ html,body{
     50% {
       opacity: 0;
     }
-  }
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 
 .testolight     { color: black !important; }
 .testodark      { color: whitesmoke !important; }

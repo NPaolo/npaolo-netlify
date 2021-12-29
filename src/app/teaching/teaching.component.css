@@ -1,5 +1,3 @@
-
-
 mat-card {
     border-radius: 25px;
     /* box-shadow: 5px 5px 20px 0px #c8dcff !important; */
@@ -14,9 +12,6 @@ mat-card {
 }
 
 @media (max-width: 992px){
-    .left{
-        justify-content: left !important;
-    }
     h1{
         font-size: 180%;
         text-align: left;

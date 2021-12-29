@@ -14,19 +14,11 @@ b {
     color: black;
 }
 
-.left{
-    text-align: center;
-}
-
 .bi-arrow-right-circle-fill {
     margin-left: .5em;
 }
 
-
 @media (max-width: 992px){
-    .left{
-        text-align: left;
-    }
     h1{
         font-size: 180%;
     }
@@ -44,9 +36,4 @@ b {
 }
 
 
-@media (min-width: 993px){
-    .lightsez:hover {
-        color: black;
-        transition-duration: 0.5s;
-    }
-}
+@media (min-width: 993px){ }

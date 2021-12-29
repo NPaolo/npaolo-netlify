@@ -1,76 +1,8 @@
 
-.social{
-    width: 10%;
-}
-
-.arrow {
-    width: 1.5vw;
-}
-
 a{
     text-decoration: none;
-}
-
-/*mobile*/ @media (max-width: 992px){
-
-    .voice{
-        height: 35vh;
-    }
-    .arrow{
-        width: 4vw;
-    }
-    #rgbimg{
-        width: 8vw;
-    }
-    /* .contatti{
-        font-size: 40%;
-    } */
-    #gmail{
-        width: 10vw;
-    }
-    #linkedin{
-        width: 10vw;
-    }
-    #instagram{
-        width: 10vw;
-    }
-}
-
-@media (min-width: 993px){
-    #rgbtxt{
-        display: none;
-    }
-
-    #gmail{
-        width: 2vw;
-    }
-    #linkedin{
-        width: 2vw;
-    }
-    #instagram{
-        width: 2vw;
-    }
-
-}
-
-
-
-a {
     color: inherit;
 }
-
-fa-icon {
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 130%;
-}
-
-fa-icon:hover{
-    color: lightgrey;
-    transition-duration: 0.3s;
-}
-
-/* NEW */
 
 mat-card{
     border-radius: 10px;
@@ -152,5 +84,4 @@ mat-card{
         min-height: 27vh;
         height: fit-content;
     }
-
 }

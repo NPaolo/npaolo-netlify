@@ -1,0 +1,22 @@
+.header-span {
+    cursor: pointer;
+}
+
+#nome, #cognome{
+    font-size: 300%;
+}
+
+#nome{
+    color: #8C8C8D !important;
+}
+
+.toggle-container{
+    z-index: 999;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    #nome, #cognome{
+        font-size: 260%;
+    }
+}

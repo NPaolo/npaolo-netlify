@@ -56,9 +56,6 @@ export const logos = [
     }
 ]
 
-
-
-
 export const AVVOCATO = {
     title: 'Il mio avvocato',
     description: 'Online tool for legal assistance.',
