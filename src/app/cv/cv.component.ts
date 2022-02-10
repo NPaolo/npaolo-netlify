@@ -9,43 +9,18 @@ import { ThemeService } from '../theme.service'
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.css'],
-  animations: [
-    trigger('Web', [
-      state('small', style({ height : '0px' })),
-      state('short', style({ height : '30px' })),
-      state('medium', style({ height: '80px' })),
-      state('large', style({ height : '130px' })),
-      transition('small <=> short', animate('400ms ease-in')),
-      transition('small <=> medium', animate('400ms ease-in')),
-      transition('small <=> large', animate('400ms ease-in')),
-    ]),
-    trigger('Mob', [
-      state('small', style({ height : '0px' })),
-      state('short', style({ height : '50px' })),
-      state('medium', style({ height: '130px' })),
-      state('large', style({ height : '225px' })),
-      transition('small <=> short', animate('400ms ease-in')),
-      transition('small <=> medium', animate('400ms ease-in')),
-      transition('small <=> large', animate('400ms ease-in')),
-    ]),
-  ],
-  
+  styleUrls: ['./cv.component.css'],  
 })
 export class CvComponent implements OnInit {
 mode : boolean;
-stateDeg = 'small'
-stateEu = 'small'
-stateBk = 'small'
-
   constructor( private x : Router, private ts: ThemeService ) { }
 
   ngOnInit(): void {
     if(this.ts.modeBool === true) {
       this.mode = true;
-    } else { this.mode = false}
-    console.log(this.ts.modeBool)
-    console.log(this.mode)
+    } else { 
+      this.mode = false
+    }
   }
 
   setMode(event) {

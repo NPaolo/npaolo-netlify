@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatRippleModule } from '@angular/material/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatSlideToggle } from '@angular/material/slide-toggle';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DialogComponent } from '../dialog/dialog.component';
 import { AVVOCATO, T2M, MOKA, CCN, logos } from '../app.constants'
 import { ThemeService } from '../theme.service';
@@ -29,9 +26,9 @@ constructor(private x : Router, private ts: ThemeService, public dialog: MatDial
   ngOnInit(): void {
     if(this.ts.modeBool === true) {
       this.mode = true;
-    } else { this.mode = false}
-    console.log(this.ts.modeBool)
-    console.log(this.mode)
+    } else { 
+      this.mode = false
+    }
   }
 
   setMode(event) {

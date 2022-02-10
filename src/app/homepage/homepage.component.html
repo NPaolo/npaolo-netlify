@@ -70,6 +70,12 @@
                                 {{logo.title}}
                             </a>
                         </mat-chip>
+                        <mat-chip class="mat-elevation-z6"
+                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
+                            <a href="https://worball.netlify.app" target="_blank" style="color: inherit !important;">
+                                Worball
+                            </a>
+                        </mat-chip>
                         </div>
                     </mat-chip-list>                      
             </mat-card-content>
@@ -112,7 +118,7 @@
     <div class="d-flex justify-content-center " style="z-index: 999 !important;">
             <mat-chip (click)="goColors()" class="mat-elevation-z6 mt-2"
             [ngStyle]="{'background-color' : mode ? '#212E3C' : 'whitesmoke', 'color' : mode ? 'whitesmoke' : '#212E3C'}">
-                Colors
+                Palette
             </mat-chip>
     </div>
     <div class="pt-4 text-thin txt-70"

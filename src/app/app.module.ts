@@ -14,6 +14,7 @@ import { LogoDesignerComponent } from './logo-designer/logo-designer.component';
 import { TeachingComponent } from './teaching/teaching.component';
 import { TorvergataComponent } from './torvergata/torvergata.component';
 import { WorkComponent } from './work/work.component';
+import { HeaderComponent } from './header/header.component';
 
 // MATERIAL
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -28,7 +29,6 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 // ANALYTICS
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
-import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
