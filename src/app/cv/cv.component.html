@@ -16,31 +16,17 @@
             <h1 class="text-bold">Bio</h1>
             <mat-icon class="icon">fingerprint</mat-icon>
         </div>
-        <div class="responsive-width text-thin txt-90">
-            Name  <b>Paolo Nazzaro</b> <br>
-            Date of Birth  <b>22 / 10 / 1996</b> <br>
-            Place of Birth  <b>Rome</b> <br>
-            Email  <b>paolonazzaro23@gmail.com</b>
-        </div>
-    </mat-card>
-</div>
-
-<div class="d-flex justify-content-center">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
-        <div class="responsive-width text-center">
-            <h1 class="text-bold">Education & Training</h1>
-            <mat-icon class="icon">menu_book</mat-icon>
-        </div>
-        <div class="responsive-width text-thin text-grey">
-            <b>Languages in the Information Society Degree</b><br>
-            <span class="text-regular txt-80">2015-2020</span><br>
-            <span class="txt-90"> University of Rome Tor Vergata <br>
-            Graduated with 110/110 with the thesis "Font's analysis and use in web communication". </span><br>
-            <b>European project EU-MADE4LL</b> <br>
-            <span class="text-regular txt-80">2017</span> <br>
-            <span class="txt-90">Production of a corporate video regarding the University of Rome Tor Vergata. </span><br>
-            <b>Scientific High School Degree</b> <br>
-            <span class="text-regular txt-80">2010-2015</span>
+        <div class="responsive-width text-semibold d-flex flex-column">
+            <span>Paolo Nazzaro</span>
+            <span class="txt-80 text-grey">22/10/1996</span>
+            <span>
+                paolonazzaro23@gmail.com
+            </span>
+            <span>
+                <a href="">
+                    paolonazzaro.netlify.app
+                </a>
+            </span>
         </div>
     </mat-card>
 </div>
@@ -51,23 +37,23 @@
             <h1 class="text-bold">Work</h1>
             <mat-icon class="icon">work</mat-icon>
         </div>
-        <div class="responsive-width text-thin text-grey">
-            <b>Front End Developer at RoTechnology</b><br>
-            <span class="text-regular txt-80">2020-now</span><br>
-            <span class="txt-90">Regular Contractor at Accenture for Angular/Ionic based project.</span><br>
-            <b>Web Developing Assistant at Tor Vergata University</b> <br>
-            <span class="text-regular txt-80">2019-now</span> <br>
-            <span class="txt-90">University Tutor for HTML + CSS + JavaScript based courses.</span><br>
-            <b>Front End Developer at Trevize s.r.l</b><br>
-            <span class="text-regular txt-80">2019-2020</span><br>
-            <span class="txt-90">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span><br>
-            <b>Web Developing Teaching Assistant at Betacom</b> <br>
-            <span class="text-regular txt-80">2019</span> <br>
-            <span class="txt-90">Teaching Assistant for Angular based courses.</span><br>
-            <b>Journalist at Quotidiano del Lazio</b> <br>
-            <span class="text-regular txt-80">2018-2020</span> <br>
-            <b>Office Clerk at Tor Vergata University</b> <br>
-            <span class="text-regular txt-80">2018</span>
+        <div class="responsive-width text-semibold text-grey d-flex flex-column">
+            <span class="text-black">Front End Developer at RoTechnology</span>
+            <span class="txt-70">2020 - now</span>
+            <span class="txt-90 text-thin">Regular Contractor at Accenture for Angular/Ionic based project.</span>
+            <span class="text-black">Web Developing Assistant at Tor Vergata University</span> 
+            <span class="txt-70">2019 - now</span> 
+            <span class="txt-90 text-thin">University Tutor for HTML + CSS + JavaScript based courses.</span>
+            <span class="text-black">Front End Developer at Trevize s.r.l</span>
+            <span class="txt-70">2019 - 2020</span>
+            <span class="txt-90 text-thin">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span>
+            <span class="text-black">Web Developing Teaching Assistant at Betacom</span> 
+            <span class="txt-70">2019</span> 
+            <span class="txt-90 text-thin">Teaching Assistant for Angular based courses.</span>
+            <span class="text-black">Journalist at Quotidiano del Lazio</span> 
+            <span class="txt-70">2018-2020</span> 
+            <span class="text-black">Office Clerk at Tor Vergata University</span> 
+            <span class="txt-70">2018</span>
         </div>
     </mat-card>
 </div>
@@ -78,36 +64,56 @@
             <h1 class="text-bold">Projects</h1>
             <mat-icon class="icon">devices</mat-icon>
         </div>
-        <div class="responsive-width text-thin text-grey">
-            <b>Al Circo Massimo </b>-
-            <span class="txt-90"> <a href="https://www.youtube.com/channel/UCFW7vR1zutzUxgSP_a_JuYQ" target="_blank" class="text-semibold"> alcircomassimo</a> <br>
-            <span class="text-regular txt-80">2021</span> <br>
-                TV Show logo designer.
-            </span><br>
-
-            <b>Il mio avvocato </b>-
-            <span class="txt-90"> <a href="https://ilmioavvocato.online/" target="_blank" class="text-semibold"> ilmioavvocato.online</a><br>
-            <span class="text-regular txt-80">2021</span> <br>
-                Logo designer for a legal assistance online tool
-            </span><br>
-
-            <b class="text-semibold pointer" id="t4f" (click)="goTv()">Tor Vergata 4 Foreigners</b>
-            <i class="bi bi-arrow-right-circle-fill ml-1 text-azure pointer" (click)="goTv()"></i><br>
-            <span class="text-regular txt-80">2020</span><br>
-            <span class="txt-90">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students. </span><br>
-
-            <b>European Aviation Academy </b>-
-            <span class="txt-90"> <a href="https://flyeaa.com/" target="_blank" class="text-semibold"> flyeaa.com</a><br>
-            <span class="text-regular txt-80">2020</span> <br>
-                Elementor + Wordpress based web site 
-            </span><br>
+        <div class="responsive-width text-semibold text-grey d-flex flex-column">
+            <span>
+                <span class="text-black">Al Circo Massimo </span>-<a href="https://www.youtube.com/channel/UCFW7vR1zutzUxgSP_a_JuYQ" target="_blank" class="txt-90"> alcircomassimo</a>
+            </span>
+            <span class="txt-70">2021</span>
+            <span class="txt-90 text-thin">TV Show logo designer.</span>
+            <span>
+                <span class="text-black">Il mio avvocato </span>-<a href="https://ilmioavvocato.online/" target="_blank" class="txt-90"> ilmioavvocato.online</a>
+            </span>
+            <span class="txt-70">2021</span>
+            <span class="txt-90 text-thin">Logo designer for a legal assistance online tool</span>
+            <span class="d-flex align-items-center">
+                <span class="text-black" (click)="goTv()">Tor Vergata 4 Foreigners</span>
+                <mat-icon class="text-azure txt-100 pt-1">chevron_right</mat-icon>
+            </span>
+            <span class="txt-70">2020</span>
+            <span class="text-thin txt-90">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students.</span>
+            <span>
+                <span class="text-black">European Aviation Academy </span>-<a href="https://flyeaa.com/" target="_blank" class="txt-90"> flyeaa.com</a>
+            </span>
+            <span class="txt-70">2020</span>
+            <span class="text-thin txt-90">Elementor + Wordpress based web site </span>
+            
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
     <mat-card class="mat-elevation-z8 mt-2 text-thin d-flex justify-content-center txt-90" [ngClass]="mode === false ? '' : 'cardark' " >
-        You can find all of my design projects in<a class="text-bold text-azure pointer" (click)="goDesign()"> this section</a>
+        You can find all of my design projects in <a class="text-bold text-azure pointer" (click)="goDesign()"> this section</a>
+    </mat-card>
+</div>
+
+<div class="d-flex justify-content-center">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+        <div class="responsive-width text-center">
+            <h1 class="text-bold">Education & Training</h1>
+            <mat-icon class="icon">menu_book</mat-icon>
+        </div>
+        <div class="responsive-width text-semibold text-grey d-flex flex-column">
+            <span class="text-black">Languages in the Information Society Degree</span>
+            <span class="txt-70">2015-2020</span>
+            <span class="txt-90 text-thin"> University of Rome Tor Vergata <br>
+            Graduated with 110/110 with the thesis "Font's analysis and use in web communication". </span>
+            <span class="text-black">European project EU-MADE4LL</span>
+            <span class="txt-70">2017</span>
+            <span class="txt-90 text-thin">Production of a corporate video regarding the University of Rome Tor Vergata.</span>
+            <span class="text-black">Scientific High School Degree</span>
+            <span class="txt-70">2010 - 2015</span>
+        </div>
     </mat-card>
 </div>
 
@@ -117,14 +123,14 @@
             <h1 class="text-bold">Skills</h1>
             <mat-icon class="icon">diamond</mat-icon>
         </div>
-        <div class="responsive-width text-thin text-grey">
-            <b>Developing</b> <br>
-            <span class="txt-90">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress </span><br>
-            <b>Design</b> <br>
-            <span class="text-regular txt-90">Logo / Icon Design</span><br>
-            <span class="txt-90">Illustrator, Photoshop</span><br>
-            <b>Languages</b> <br>
-            <span class="txt-90">English C1, German B1</span><br>
+        <div class="responsive-width text-semibold text-grey d-flex flex-column">
+            <span class="text-black">Developing</span> 
+            <span class="text-thin txt-90">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress</span>
+            <span class="text-black">Design</span> 
+            <span class="text-regular txt-90">Logo / Icon Design</span>
+            <span class="text-thin txt-90">Adobe Suite: Illustrator, Photoshop</span>
+            <span class="text-black">Languages</span> 
+            <span class="text-thin txt-90">English C1, German B1</span>
         </div>
     </mat-card>
 </div>
@@ -135,13 +141,12 @@
             <h1 class="text-bold">Interests</h1>
             <mat-icon class="icon">sports_basketball</mat-icon>
         </div>
-        <div class="responsive-width text-thin text-grey">
-            <b>Design</b> <br>
-            <span class="txt-90">Creation of minimal graphic contents</span><br>
-            <b>Sports</b> <br>
-            <span class="text-regular txt-90">Basketball</span><br>
-            <span class="txt-90">Playing since 2002</span><br>
-            <span class="text-regular txt-90">Soccer</span> <br>
+        <div class="responsive-width text-semibold text-grey d-flex flex-column">
+            <span class="text-black">Design</span> 
+            <span class="text-thin txt-90">Creation of minimal graphic contents</span>
+            <span class="text-black">Sports</span> 
+            <span class="text-thin txt-90">Playing Basketball since 2002</span>
+            <span class="text-thin txt-90">Soccer</span> 
         </div>
     </mat-card>
 </div>

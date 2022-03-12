@@ -107,14 +107,17 @@
     color: grey;
 }
 
+.txt-100{
+    font-size: 100% !important;
+}
 .txt-90{
-    font-size: 90%;
+    font-size: 90% !important;
 }
 .txt-80{
     font-size: 80%;
 }
 .txt-70{
-    font-size: 70%;
+    font-size: 70% !important;
 }
 .txt-60{
     font-size: 60%;

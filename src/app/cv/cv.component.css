@@ -14,20 +14,12 @@ b {
     color: black;
 }
 
-.bi-arrow-right-circle-fill {
-    margin-left: .5em;
-}
-
 @media (max-width: 992px){
     h1{
         font-size: 180%;
     }
     .icon{
         display: none;
-    }
-    .web{
-        display: none;
-        font-weight: lighter;
     }
     mat-card {
         flex-direction: column;
