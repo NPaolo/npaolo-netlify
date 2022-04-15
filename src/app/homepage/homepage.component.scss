@@ -89,10 +89,16 @@ mat-card {
         display: none;
     }
     mat-card {
-        width: 23rem !important;
+        width: 22rem !important;
     }
     mat-button-toggle-group {
         display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-fluid {
+        min-height: 100%;
     }
 }
 
