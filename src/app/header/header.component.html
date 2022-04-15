@@ -1,12 +1,23 @@
 <div class="d-flex text-center flex-column">
     <div>
         <span class="header-span text-heavy" (click)="goHome()">
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="nome">paolo</span>
-            <span [ngClass]="mode === false ? 'testolight' : 'testodark' " id="cognome">nazzaro</span>
+            <span class="name">paolo</span>
+            <span class="surname">nazzaro</span>
             <span class="logo__cursor"></span>
         </span>
     </div>
     <div class="toggle-container text-center">
-        <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle>
+        <!-- <mat-slide-toggle color="primary" (change)="switchMode()" [checked]="mode"></mat-slide-toggle> -->
+        <mat-button-toggle-group appearance="legacy" name="fontStyle" (change)="setMode($event.value)">
+            <mat-button-toggle class="pt-1" value="light" [checked]="mode === 'light'">
+                <mat-icon>light_mode</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle class="pt-1" value="dark" [checked]="mode === 'dark'">
+                <mat-icon>dark_mode</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle class="pt-1" value="color" [checked]="mode === 'color'">
+                <mat-icon>color_lens</mat-icon>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
     </div>
 </div>

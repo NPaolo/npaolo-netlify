@@ -1,17 +1,10 @@
-<style type="text/css">
-    .sfondolight { background-color: white }
-  
-    .sfondodark { background-color: #222f3e !important; color: whitesmoke !important; }
-  
-  </style>
-
-<div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+<div class="container-fluid" [ngClass]="bgClass">
 
     <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
-        <div class="d-flex card-content align-items-center p-4" [ngClass]="mode === false ? 'lightsez' : '' " >
+    <mat-card class="mat-elevation-z12 mt-3 content-card" [ngClass]="cardClass">
+        <div class="d-flex card-content align-items-center p-4 main-info">
             <div class="px-3">
                 <img src="./assets/homeiphone.png" id="iphone" alt="">
             </div>
@@ -30,8 +23,8 @@
     </mat-card>
 </div>
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
-        <div class="d-flex card-content align-items-center py-2" [ngClass]="mode === false ? 'lightsez' : '' " >
+    <mat-card class="mat-elevation-z12 mt-3" [ngClass]="cardClass">
+        <div class="d-flex card-content align-items-center py-2 main-info">
             <div class="px-3 d-flex align-items-center">
                 <span class="text-regular">
                     <h4>PDF + Gallery + Camera file upload</h4>
@@ -42,7 +35,7 @@
                     <br><br>
                 </span>
             </div>
-            <div class="d-flex justify-content-around align-items-center" [ngClass]="mode === false ? 'lightsez' : '' " >
+            <div class="d-flex justify-content-around align-items-center">
                 <div class="px-3">
                     <img src="./assets/docsphone.png" id="iphone" alt="">
                 </div>

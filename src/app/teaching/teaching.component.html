@@ -1,25 +1,17 @@
-<style type="text/css">
-    .sfondolight { background-color: white } 
-    .sfondodark { background-color: #222f3e; color: whitesmoke; }
-    .visible { overflow: visible; transition-duration: 1s;}
-    .hidden { overflow: hidden; }
-  </style>
-
-
-<div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+<div class="container-fluid" [ngClass]="bgClass">
 
     <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
 <div class="d-flex justify-content-center mt-3">
-    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8 content-card" [ngClass]="cardClass">
         <div class="responsive-width padding">
-            <h1 class="text-bold">Teaching Assistant</h1>
+            <h1 class="main-info text-bold">Teaching Assistant</h1>
         </div>
-        <div class="responsive-width txt-90">
+        <div class="responsive-width txt-90 main-info">
             <div class="text-semibold">
                 <b><a href="http://giorgiopiccardo.com" target="_blank">Prof. Giorgio Piccardo</a></b>'s teaching assistant for <b>Web Developing</b> courses.<br><br>
                 <mat-chip-list>
-                    <mat-chip class="p-2" color="primary" selected="true">
+                    <mat-chip class="p-2 mat-elevation-z4" color="primary" selected="true">
                         <a style="color: white;" href="https://www-2020.linfo.lettere.uniroma2.it/" target="_blank">
                         LINFO course</a>
                     </mat-chip>

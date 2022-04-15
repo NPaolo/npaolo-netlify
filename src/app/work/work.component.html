@@ -1,23 +1,15 @@
-<style type="text/css">
-    .sfondolight { background-color: white } 
-    .sfondodark { background-color: #222f3e; color: whitesmoke; }
-    .visible { overflow: visible; transition-duration: 1s;}
-    .hidden { overflow: hidden; }
-  </style>
-
-<div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+<div class="container-fluid" [ngClass]="bgClass">
 
     <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
 <div class="d-flex justify-content-center align-items-center mt-3">
-    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8 content-card" [ngClass]="cardClass">
         <div class="responsive-width padding">
-            <h1 class="text-bold">Frontend Developer</h1>
+            <h1 class="main-info text-bold">Frontend Developer</h1>
         </div>
-        <div class="responsive-width txt-90">
-            <b>Angular Developer</b> at <b><a href="http://www.rotechnology.it/" target="_blank">RoTechnology</a></b>.<br>
-            <b>Regular Contractor at Accenture</b>
-            <br><br>
+        <div class="responsive-width main-info txt-90">
+            <span class="text-bold">Angular Developer at <a href="http://www.rotechnology.it/" target="_blank">RoTechnology</a> - Accenture</span>.<br>
+            <br>
             <span class="text-regular">Collaborating with Trevize s.r.l</span><br><br>
             <span class="text-thin">Design and Development of web-sites, web-apps and mobile applications.</span><br><br>
             <b>Skills</b><br>

@@ -5,23 +5,29 @@ import { ThemeService } from '../theme.service';
 @Component({
   selector: 'app-torvergata',
   templateUrl: './torvergata.component.html',
-  styleUrls: ['./torvergata.component.css']
+  styleUrls: ['./torvergata.component.scss']
 })
 export class TorvergataComponent implements OnInit {
-mode: boolean;
+mode: string;
+bgClass: string;
+cardClass: string;
 
   constructor( private x : Router, private ts: ThemeService  ) { }
 
   ngOnInit(): void {
-    if(this.ts.modeBool === true) {
-      this.mode = true;
-    } else { this.mode = false}
-    console.log(this.ts.modeBool)
-    console.log(this.mode)
+    this.mode = this.ts.globalMode;
+    this.setThemeClass();
   }
 
   setMode(event) {
     this.mode = event;
+    this.ts.switchMode(event);
+    this.setThemeClass()
+  }
+
+  setThemeClass() {
+    this.bgClass = this.ts.bgClass;
+    this.cardClass = this.ts.cardClass;
   }
 
 }

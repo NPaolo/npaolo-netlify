@@ -7,10 +7,10 @@ import { ThemeService } from '../theme.service';
 @Component({
   selector: 'app-colors',
   templateUrl: './colors.component.html',
-  styleUrls: ['./colors.component.css']
+  styleUrls: ['./colors.component.scss']
 })
 export class ColorsComponent implements OnInit {
-mode : boolean;
+mode: string;
 
 constructor(private _snackBar: MatSnackBar, private x : Router, private ts: ThemeService) {}
 
@@ -20,17 +20,15 @@ openSnackBar(message: string, action: string) {
   });
 }
 
-ngOnInit(): void {
-  if(this.ts.modeBool === true) {
-    this.mode = true;
-  } else { this.mode = false}
-  console.log(this.ts.modeBool)
-  console.log(this.mode)
-}
+  ngOnInit(): void {
+    this.mode = this.ts.globalMode;
+  }
 
-setMode(event) {
-  this.mode = event;
-}
+  setMode(event) {
+    this.mode = event;
+    this.ts.switchMode(event);
+    this.mode = this.ts.globalMode;
+  }
 
   copyMessage(val: string){
     const selBox = document.createElement('textarea');
@@ -46,6 +44,15 @@ setMode(event) {
     document.body.removeChild(selBox);
   }
 
-
+  setModeStyle() {
+    switch (this.mode) {
+      case 'light':
+        return 'light-bg';
+      case 'dark':
+        return 'dark-bg';
+      default:
+        return 'light'
+    }
+  }
 
 }

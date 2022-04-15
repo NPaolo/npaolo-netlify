@@ -1,0 +1,109 @@
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+::ng-deep .mat-chip-list-wrapper{
+    justify-content: center !important;
+}
+
+h1.desktop-title {
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+mat-card {
+    min-height: 10rem;
+    height: fit-content;
+    width: 25rem;
+    &.work-card {
+        background-color: rgba(56, 128, 255, 0.2) !important;
+        mat-chip { background-color: #3880ff !important; }
+    }
+    &.proj-card {
+        background-color: rgba(94, 39, 205, 0.2) !important;
+        mat-chip { background-color: #5f27cd !important; }
+    }
+    &.contacts-card {
+        background-color: rgba(235, 59, 109, 0.2) !important;
+        mat-chip { background-color: #eb3b6d !important; }
+    }
+    mat-chip {
+        background-color: transparent !important;
+    }
+    &.light-home-card {
+        background-color: white;
+        mat-chip { background-color: white !important; }
+        &.work-card {
+            mat-chip { color: #3880ff; }
+        }
+        &.proj-card {
+            mat-chip { color: #5f27cd; }
+        }
+        &.contacts-card {
+            mat-chip { color: #eb3b6d; }
+        }
+    }
+    &.dark-home-card {
+        background-blend-mode: darken !important;
+        mat-chip { color: whitesmoke !important; }
+        &.work-card {
+            mat-chip { background-color: #3880ff !important; }
+        }
+        &.proj-card {
+            mat-chip { background-color: #5f27cd !important; }
+        }
+        &.contacts-card {
+            mat-chip { background-color: #eb3b6d !important; }
+        }
+    }
+    &.color-home-card {
+        backdrop-filter: blur(13px) saturate(120%) !important;
+        h1 {
+            color: aliceblue !important;
+        }
+        mat-chip {
+            background-color: transparent !important;
+            backdrop-filter: blur(13px) saturate(120%) !important;
+            color: white !important;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container-fluid {
+        flex-direction: column;
+        height: 100vh !important;
+    }
+    .header, .content {
+        width: 100vw;
+        height: fit-content;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .desktop-title {
+        display: none;
+    }
+    .description {
+        display: none;
+    }
+    mat-card {
+        width: 23rem !important;
+    }
+    mat-button-toggle-group {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) {
+    app-header {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px)  {
+    .container-fluid {
+        height: 100vh !important;
+    }
+}

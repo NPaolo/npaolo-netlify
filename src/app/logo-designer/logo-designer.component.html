@@ -1,27 +1,19 @@
-<style type="text/css">
-    .sfondolight { background-color: white } 
-    .sfondodark { background-color: #222f3e; color: whitesmoke; }
-    .visible { overflow: visible; transition-duration: 1s;}
-    .hidden { overflow: hidden; }
-  </style>
-
-
-<div class="container-fluid mb-3" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+<div class="container-fluid mb-3" [ngClass]="bgClass">
 
     <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
 <div class="d-flex justify-content-center mt-3">
-    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around align-items-center mat-elevation-z8" [ngClass]="cardClass">
         <div class="responsive-width padding">
-            <h1 class="text-bold">Logo Designer</h1>
+            <h1 class="heading text-bold">Logo Designer</h1>
         </div>
-        <div class="responsive-width txt-90">
+        <div class="responsive-width main-info txt-90">
             <div class="text-semibold">
                 Enhancing brands' visual identity.<br><br>
             </div>
             <div class="text-regular">
-                Formal participation to <a href="https://www.eurspa.it/it/gare-e-fornitori/gare/gare-eur-spa/bando-concorso-idee-definizione-nuovo-logo-la-nuvola" target="_blank">
-                    Un nuovo logo per La nuvola</a>
+                Formal participation to <a class="text-bold" href="https://www.eurspa.it/it/gare-e-fornitori/gare/gare-eur-spa/bando-concorso-idee-definizione-nuovo-logo-la-nuvola" target="_blank">
+                    Un nuovo logo per La Nuvola</a>
             </div><br>
             <div class="text-thin txt-90">
                 You can find some of my recent projects just below.
@@ -32,17 +24,18 @@
 
 <!-- WEB PROJECTS -->
 <div class="web-projects d-flex flex-column justify-content-center align-items-center">
-    <mat-card class="mat-elevation-z12 mt-4" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' " matRipple
+    <mat-card class="mat-elevation-z12 mt-4" [ngClass]="cardClass" matRipple
     *ngFor="let logo of logos">
     <div class="row d-flex align-items-center project-content">
-        <div class="col-lg-6 text-regular pl-4">
-            <span class="text-semibold">Client </span>{{logo.title}}<hr>
-            <span class="text-semibold">Date </span>{{logo.date}}<hr>
-            <span class="text-semibold">Description </span>{{logo.description}}
+        <div class="col-lg-6 text-regular pl-4 main-info">
+            <span class="text-bold">{{logo.title}}</span><hr>
+            <span class="text-regular">{{logo.date}}</span><hr>
+            <span class="text-regular">{{logo.description}}</span>
         </div>
         <div class="col-lg-6 text-center">
             <img class="project-img" [src]="logo.image" alt=""
-            [ngClass]="logo.size === 'lg' ? 'lg' : 'sm'">
+            [ngClass]="logo.size === 'lg' ? 'lg' : 'sm'" (load)="onLoad()">
+            <mat-spinner *ngIf="loading"></mat-spinner>
         </div>
     </div>
 </mat-card>
@@ -53,16 +46,16 @@
 <!-- MOBILE PROJECTS -->
 <div class="mobile-projects" *ngFor="let logo of logos; let i = index">
 	<mat-card class="tp-box mat-elevation-z12 mt-4 d-flex align-items-center flex-column" (click)="toggleFlip(i)" [@flipState]="logos[i].flip"
-    [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+    [ngClass]="cardClass">
 		<div class="front-card text-center d-flex align-items-center justify-content-center h-75 mt-auto" 
-        *ngIf="logos[i].flip === 'inactive'">
+            *ngIf="logos[i].flip === 'inactive'">
             <img class="project-img" [src]="logo.image" alt=""
             [ngClass]="logo.size === 'lg' ? 'lg' : 'sm'">
 		</div>
-		<div class="back-card text-regular pt-2 pl-4" *ngIf="logos[i].flip === 'active'">
-            <span class="text-semibold">Client </span>{{logo.title}}<hr>
-            <span class="text-semibold">Date </span>{{logo.date}}<hr>
-            <span class="text-semibold">Description </span>{{logo.description}}
+		<div class="back-card text-regular pt-2 pl-4 main-info" *ngIf="logos[i].flip === 'active'">
+            <span class="text-bold">Client </span>{{logo.title}}<hr>
+            <span class="text-bold">Date </span>{{logo.date}}<hr>
+            <span class="text-bold">Description </span>{{logo.description}}
             <div class="d-flex justify-content-between align-items-center pt-2">
                 <mat-chip-list>
                     <mat-chip selected [color]="logo.color" class="visit mt-2 px-3">

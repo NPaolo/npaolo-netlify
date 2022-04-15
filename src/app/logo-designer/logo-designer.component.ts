@@ -7,7 +7,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-logo-designer',
   templateUrl: './logo-designer.component.html',
-  styleUrls: ['./logo-designer.component.css'],
+  styleUrls: ['./logo-designer.component.scss'],
   animations: [
     trigger('flipState', [
       state('active', style({
@@ -22,7 +22,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class LogoDesignerComponent implements OnInit {
-  mode : boolean;
+  mode: string;
+  bgClass: string;
+  cardClass: string;
+  loading = true;
 
   readonly AVVOCATO = AVVOCATO;
   readonly T2M = T2M;
@@ -32,29 +35,27 @@ export class LogoDesignerComponent implements OnInit {
   constructor( private x : Router, private ts: ThemeService ) { }
 
   ngOnInit(): void {
-    if(this.ts.modeBool === true) {
-      this.mode = true;
-      this.logos.find(element => element.title === 'Time To Marketing').image = 'assets/t2m-dark.png'
-    } else { 
-      this.mode = false;
-      this.logos.find(element => element.title === 'Time To Marketing').image = 'assets/t2m.png'
-    }
+    this.mode = this.ts.globalMode;
+    this.setThemeClass();
   }
 
+  setMode(event) {
+    this.mode = event;
+    this.ts.switchMode(event);
+    this.setThemeClass()
+  }
 
-  // flip: string = 'inactive';
+  setThemeClass() {
+    this.bgClass = this.ts.bgClass;
+    this.cardClass = this.ts.cardClass;
+  }
 
   toggleFlip(index: number) {
     this.logos[index].flip = (this.logos[index].flip == 'inactive') ? 'active' : 'inactive';
   }
 
-  setMode(event) {
-    this.mode = event;
-    if (this.mode === true) {
-      this.logos.find(logo => logo.title === 'Time To Marketing').image = 'assets/t2m-dark.png';
-    } else {
-      this.logos.find(logo => logo.title === 'Time To Marketing').image = 'assets/t2m.png';
-    }
+  onLoad() {
+    this.loading = false;
   }
 
 }

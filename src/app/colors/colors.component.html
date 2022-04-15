@@ -1,4 +1,4 @@
-<div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+<div class="container-fluid" [ngClass]="setModeStyle()">
 
     <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 

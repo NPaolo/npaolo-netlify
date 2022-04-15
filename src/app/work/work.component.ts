@@ -5,23 +5,29 @@ import { ThemeService } from '../theme.service';
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.css']
+  styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
-mode : boolean;
+mode: string;
+bgClass: string;
+cardClass: string;
 
   constructor( private x : Router, private ts: ThemeService  ) { }
 
   ngOnInit(): void {
-    if(this.ts.modeBool === true) {
-      this.mode = true;
-    } else { this.mode = false}
-    console.log(this.ts.modeBool)
-    console.log(this.mode)
+    this.mode = this.ts.globalMode;
+    this.setThemeClass();
   }
 
   setMode(event) {
     this.mode = event;
+    this.ts.switchMode(event);
+    this.setThemeClass()
+  }
+
+  setThemeClass() {
+    this.bgClass = this.ts.bgClass;
+    this.cardClass = this.ts.cardClass;
   }
   
 }

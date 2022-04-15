@@ -1,8 +1,3 @@
-mat-card {
-    border-radius: 25px;
-    /* box-shadow: 5px 5px 20px 0px #c8dcff !important; */
-}
-
 .container-fluid {
     height: 100vh !important;
 }
@@ -18,4 +13,8 @@ mat-card {
     mat-card {
         flex-direction: column;
     }
+}
+
+.mat-chip-list-wrapper {
+    justify-content: flex-start !important;
 }

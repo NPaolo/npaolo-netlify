@@ -25,9 +25,12 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // ANALYTICS
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -57,7 +60,10 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     MatChipsModule,
     MatGridListModule,
     NgxGoogleAnalyticsModule.forRoot('G-LW9HCX3DP2'),
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

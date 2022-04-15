@@ -5,14 +5,16 @@ import { DialogComponent } from '../dialog/dialog.component';
 import { AVVOCATO, T2M, MOKA, CCN, logos } from '../app.constants'
 import { ThemeService } from '../theme.service';
 
-
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-mode : boolean;
+mode: string;
+bgClass: string;
+homeCardClass: string;
+cardClass: string;
 
 readonly AVVOCATO = AVVOCATO;
 readonly T2M = T2M;
@@ -24,15 +26,20 @@ readonly logos = logos
 constructor(private x : Router, private ts: ThemeService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    if(this.ts.modeBool === true) {
-      this.mode = true;
-    } else { 
-      this.mode = false
-    }
+    this.mode = this.ts.globalMode;
+    this.setThemeClass()
   }
 
   setMode(event) {
     this.mode = event;
+    this.ts.switchMode(event);
+    this.setThemeClass()
+  }
+
+  setThemeClass() {
+    this.bgClass = this.ts.bgClass;
+    this.homeCardClass = this.ts.homeCardClass;
+    this.cardClass = this.ts.cardClass;
   }
 
   goCV(){
@@ -65,7 +72,7 @@ constructor(private x : Router, private ts: ThemeService, public dialog: MatDial
         color: color
       }
     });
-
   }
+
 }
 

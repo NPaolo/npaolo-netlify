@@ -84,6 +84,7 @@
     src: url('/assets/Barlow-Light.ttf');
 }
 
+/* FONT-WEIGHT */
 .text-heavy{
     font-family: 'SF-heavy', sans-serif;
 }
@@ -100,13 +101,26 @@
     font-family: 'SF-light', sans-serif;
 }
 
+/* FONT-COLOR */
 .text-azure {
     color: #3880ff;
 }
 .text-grey {
     color: grey;
 }
+.text-whitesmoke {
+    color: whitesmoke;
+}
 
+/* FONT-ALIGNMENT */
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+/* FONT-SIZE */
 .txt-100{
     font-size: 100% !important;
 }
@@ -130,6 +144,14 @@
 }
 .txt-30{
     font-size: 30%;
+}
+
+/* SIZING */
+.w-40 {
+    width: 40%;
+}
+.w-60 {
+    width: 60%;
 }
 
 .pointer {
@@ -221,21 +243,97 @@ a {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.testolight     { color: black !important; }
-.testodark      { color: whitesmoke !important; }
-.sfondolight { background-color: white }
-.sfondodark { background-color: #222f3e; color: whitesmoke; }
-.shadowdark     { box-shadow: -10px 15px 40px -20px #c8dcff; }
-.cardark        { background-blend-mode: darken; }
 
-.cardark {
-    background-color: #222f3e; 
-    background-blend-mode: darken; 
-    color: whitesmoke !important;
+.light-bg { 
+    background-color: white;
+    color: black;
+    .name {
+        color: grey;
+    }
+    mat-card {
+        .heading, .main-info {
+            color: black;
+        }
+        .date-info {
+            color: grey;
+        }
+        .extra-info {
+            color: grey;
+        }
+    }
 }
-.cardark b {
-    color: whitesmoke !important;
+
+.dark-bg {
+    background-color: #222f3e;
+    color: whitesmoke;
+    .name {
+        color: grey;
+    }
+    .mat-button-toggle-checked {
+        background-color: unset !important;
+        color: white !important;
+    }
+    mat-card {
+        .heading, .main-info {
+            color: whitesmoke;
+        }
+        .date-info {
+            color: darkgray;
+        }
+        .extra-info {
+            color: darkgray;
+        }
+    }
 }
-.cardark span {
-    color: lightgray !important;
+
+.color-bg {
+    background-image: url('assets/glassmorphism.png');
+    background-size: cover;
+    .name {
+        color: aliceblue;
+    }
+    .description {
+        color: aliceblue;
+    }
+    .mat-button-toggle-checked {
+        background-color: unset !important;
+        color: white !important;
+    }
+    mat-card {
+        backdrop-filter: blur(13px) saturate(120%) !important;
+        .heading, .main-info {
+            color: whitesmoke;
+        }
+        .date-info {
+            color: antiquewhite;
+        }
+        .extra-info {
+            color: antiquewhite;
+        }
+        a {
+            color: skyblue !important;
+        }
+    }
+}
+
+mat-card {
+    border-radius: 0.8rem !important;
+    background-color: transparent !important;
+    &.content-card {
+        .date-info {
+            font-size: 0.7rem;
+        }
+        .extra-info {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+mat-button-toggle-group {
+    border-radius: 0.5rem !important;
+    mat-button-toggle {
+        mat-icon {
+            font-size: unset !important;
+        }
+    }
 }

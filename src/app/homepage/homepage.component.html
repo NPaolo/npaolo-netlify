@@ -1,77 +1,73 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+<div class="container-fluid d-flex p-0" [ngClass]="bgClass">
+    <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
-<div class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
-
-<app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
-
-<div class="riga firstrow d-flex justify-content-around align-items-center pt-3 pb-5">
-    <div class="w-100 px-5">
-        <mat-card class="bio-card text-center mat-elevation-z24" [ngStyle]="{'background-color' : mode ? 'rgba(16, 172, 132,0.2)' : ''}" >
-            <mat-card-title class="text-bold" style="color: #10ac84">
-                <h1>Bio</h1>
-            </mat-card-title>
-            <mat-card-content class="text-thin">
-                    <mat-chip-list>
-                        <div class="d-flex justify-content-center text-center flex-column">
-                            <!-- <b class="text-black text-thin" [ngClass]="mode === false ? '' : 'testodark' ">22 / 10 / 1996</b> -->
-                        <mat-chip class="mat-elevation-z6" 
-                        [ngClass]="mode === false ? 'bio-chip' : 'bio-chip-dark'"
-                        (click)="goCV()">Curriculum Vitae</mat-chip>
-                        </div>
-                    </mat-chip-list>                      
-            </mat-card-content>
-        </mat-card>
+    <div class="w-40 d-flex flex-column justify-content-center align-items-end header">
+        <h1 class="text-heavy text-right desktop-title">
+            <span class="name">paolo</span><br>
+            <span class="surname">nazzaro</span>
+        </h1>
+        <h5 class="text-bold text-azure description">
+            frontend developer
+        </h5>
+        <mat-chip-list>
+            <mat-chip color="primary" selected class="my-4 mat-elevation-z4" (click)="goCV()">Curriculum Vitae</mat-chip>
+        </mat-chip-list>
+        <mat-button-toggle-group appearance="legacy" name="fontStyle" (change)="setMode($event.value)">
+            <mat-button-toggle class="pt-1" value="light" [checked]="mode === 'light'">
+                <mat-icon>light_mode</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle class="pt-1" value="dark" [checked]="mode === 'dark'">
+                <mat-icon>dark_mode</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle class="pt-1" value="color" [checked]="mode === 'color'">
+                <mat-icon>color_lens</mat-icon>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
     </div>
-    <div class="w-100 px-5">
-        <mat-card class="work-card text-center mat-elevation-z24" [ngStyle]="{'background-color' : mode ? 'rgba(56, 128, 255,0.2)' : ''}" >
+    <div class="w-60 d-flex flex-column justify-content-center align-items-center content">
+        <mat-card class="work-card text-center mat-elevation-z6 my-2" [ngClass]="homeCardClass">
             <mat-card-title class="text-bold text-azure">
                 <h1>Work</h1>
             </mat-card-title>
             <mat-card-content class="text-thin">
-                    <mat-chip-list>
-                        <div class="d-flex justify-content-center text-center flex-wrap text-semibold">
-                        <mat-chip class="mat-elevation-z6" (click)="goWork()"
-                        [ngClass]="mode === false ? 'work-chip' : 'work-chip-dark'">Front End Developer
+                <mat-chip-list>
+                    <div class="d-flex justify-content-center text-center flex-wrap text-semibold">
+                        <mat-chip class="mat-elevation-z2 work-chip" (click)="goWork()">
+                            Front End Developer
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6" routerLink="teaching"
-                        [ngClass]="mode === false ? 'work-chip' : 'work-chip-dark'">Teaching Assistant
+                        <mat-chip class="mat-elevation-z2 work-chip" routerLink="teaching">
+                            Teaching Assistant
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6" routerLink="logo-designer"
-                        [ngClass]="mode === false ? 'work-chip' : 'work-chip-dark'">Freelance Logo Designer
+                        <mat-chip class="mat-elevation-z2 work-chip" routerLink="logo-designer">
+                            Freelance Logo Designer
                         </mat-chip>
                         </div>
-                    </mat-chip-list>                      
+                </mat-chip-list>
             </mat-card-content>
         </mat-card>
-    </div>
-</div>
-<div class="riga d-flex justify-content-around align-items-center  pb-3">
-    <div class="w-100 px-5">
-        <mat-card class="proj-card text-center mat-elevation-z24" [ngStyle]="{'background-color' : mode ? 'rgba(94, 39, 205,0.2)' : ''}">
+        <mat-card class="proj-card text-center mat-elevation-z6 my-2" [ngClass]="homeCardClass">
             <mat-card-title class="text-bold" style="color: #5f27cd ;">
-                <h1 [ngStyle]="{'color' : mode ? ' #e5ddf7' : ''}">Projects</h1>
+                <h1>Projects</h1>
             </mat-card-title>
             <mat-card-content class="text-thin">
                     <mat-chip-list>
                         <div class="d-flex justify-content-center text-center flex-wrap">
-                        <mat-chip class="mat-elevation-z6" (click)="goTv()"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">Tor Vergata for Foreigners
+                        <mat-chip class="mat-elevation-z2 proj-chip" (click)="goTv()">
+                            Tor Vergata for Foreigners
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
+                        <mat-chip class="mat-elevation-z2 proj-chip">
                             <a href="https://flyeaa.com/" target="_blank" style="color: inherit !important;">
                                 European Aviation Academy
                             </a>
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'" *ngFor="let logo of logos; let i=index">
+                        <mat-chip class="mat-elevation-z2 proj-chip"
+                            *ngFor="let logo of logos; let i=index">
                             <a (click)="openDialog(logo.title, logo.description, logo.image, logo.url, logo.color)"
                              style="color: inherit !important;">
                                 {{logo.title}}
                             </a>
                         </mat-chip>
-                        <mat-chip class="mat-elevation-z6"
-                        [ngClass]="mode === false ? 'proj-chip' : 'proj-chip-dark'">
+                        <mat-chip class="mat-elevation-z2 proj-chip">
                             <a href="https://worball.netlify.app" target="_blank" style="color: inherit !important;">
                                 Worball
                             </a>
@@ -80,9 +76,7 @@
                     </mat-chip-list>                      
             </mat-card-content>
         </mat-card>
-    </div>
-    <div class="w-100 px-5">
-        <mat-card class="contacts-card text-center mat-elevation-z24" [ngStyle]="{'background-color' : mode ? 'rgba(235, 59, 109,0.2)' : ''}" >
+        <mat-card class="contacts-card text-center mat-elevation-z6 my-2" [ngClass]="homeCardClass">
             <mat-card-title class="text-bold" style="color: #eb3b6d ;">
                 <h1>Contacts</h1>
             </mat-card-title>
@@ -90,20 +84,17 @@
                     <mat-chip-list>
                         <div class="d-flex justify-content-center text-center flex-wrap">
                             <a href="mailto:paolonazzaro23@gmail.com" >
-                                <mat-chip class="mat-elevation-z6"
-                                [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
+                                <mat-chip class="mat-elevation-z2 contacts-card">
                                     <i class="bi bi-envelope-fill"></i>
                                 </mat-chip>
                             </a>
                             <a href="https://www.linkedin.com/in/paolonazzaro23/" target="_blank">
-                                <mat-chip class="mat-elevation-z6"
-                                [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">                
+                                <mat-chip class="mat-elevation-z2 contacts-card">                
                                     <i class="bi bi-linkedin"></i>
                                 </mat-chip>
                             </a>
                             <a href="https://www.instagram.com/paolonazzaro.png/" target="_blank">
-                                <mat-chip class="mat-elevation-z6"
-                                [ngClass]="mode === false ? 'contacts-chip' : 'contacts-chip-dark'">
+                                <mat-chip class="mat-elevation-z2 contacts-card">
                                     <i class="bi bi-instagram"></i>
                                 </mat-chip>
                             </a>
@@ -112,19 +103,4 @@
             </mat-card-content>
         </mat-card>
     </div>
-</div>
-
-<div class="footer text-center">
-    <div class="d-flex justify-content-center " style="z-index: 999 !important;">
-            <mat-chip (click)="goColors()" class="mat-elevation-z6 mt-2"
-            [ngStyle]="{'background-color' : mode ? '#212E3C' : 'whitesmoke', 'color' : mode ? 'whitesmoke' : '#212E3C'}">
-                Palette
-            </mat-chip>
-    </div>
-    <div class="pt-4 text-thin txt-70"
-    [ngClass]="mode === false ? 'testolight' : 'testodark' ">
-        Designed by Paolo Nazzaro
-    </div>
-</div>
-
 </div>

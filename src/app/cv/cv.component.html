@@ -1,25 +1,17 @@
-<style type="text/css">
-    .sfondolight { background-color: white }
-    .sfondodark { background-color: #222f3e !important; color: whitesmoke !important; }
-    .testolight     { color: black !important; }
-    .testodark      { color: whitesmoke !important; }
-    .shadowdark     { box-shadow: -10px 15px 40px -20px #c8dcff; }
-  </style>
-    
-<div  class="container-fluid" [ngClass]="mode === false ? 'sfondolight' : 'sfondodark' ">
+<div class="container-fluid" [ngClass]="bgClass">
 
     <app-header [mode]="mode" (emitMode)="setMode($event)"></app-header>
 
 <div class="d-flex justify-content-center align-items-center mt-3">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8 bio" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 bio content-card" [ngClass]="cardClass">
         <div class="responsive-width text-center">
-            <h1 class="text-bold">Bio</h1>
-            <mat-icon class="icon">fingerprint</mat-icon>
+            <h1 class="heading text-bold">Bio</h1>
+            <!-- <mat-icon class="icon">fingerprint</mat-icon> -->
         </div>
         <div class="responsive-width text-semibold d-flex flex-column">
-            <span>Paolo Nazzaro</span>
-            <span class="txt-80 text-grey">22/10/1996</span>
-            <span>
+            <span class="main-info">Paolo Nazzaro</span>
+            <span class="date-info">22/10/1996</span>
+            <span class="main-info">
                 paolonazzaro23@gmail.com
             </span>
             <span>
@@ -32,128 +24,130 @@
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 content-card" [ngClass]="cardClass">
         <div class="responsive-width text-center">
-            <h1 class="text-bold">Work</h1>
-            <mat-icon class="icon">work</mat-icon>
+            <h1 class="heading text-bold">Work</h1>
+            <!-- <mat-icon class="icon">work</mat-icon> -->
         </div>
-        <div class="responsive-width text-semibold text-grey d-flex flex-column">
-            <span class="text-black">Front End Developer at RoTechnology</span>
-            <span class="txt-70">2020 - now</span>
-            <span class="txt-90 text-thin">Regular Contractor at Accenture for Angular/Ionic based project.</span>
-            <span class="text-black">Web Developing Assistant at Tor Vergata University</span> 
-            <span class="txt-70">2019 - now</span> 
-            <span class="txt-90 text-thin">University Tutor for HTML + CSS + JavaScript based courses.</span>
-            <span class="text-black">Front End Developer at Trevize s.r.l</span>
-            <span class="txt-70">2019 - 2020</span>
-            <span class="txt-90 text-thin">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span>
-            <span class="text-black">Web Developing Teaching Assistant at Betacom</span> 
-            <span class="txt-70">2019</span> 
-            <span class="txt-90 text-thin">Teaching Assistant for Angular based courses.</span>
-            <span class="text-black">Journalist at Quotidiano del Lazio</span> 
-            <span class="txt-70">2018-2020</span> 
-            <span class="text-black">Office Clerk at Tor Vergata University</span> 
-            <span class="txt-70">2018</span>
+        <div class="responsive-width text-semibold d-flex flex-column">
+            <span class="main-info text-bold">Front End Developer at RoTechnology</span>
+            <span class="date-info">2020 - now</span>
+            <span class="extra-info text-thin">Regular Contractor at Accenture for Angular/Ionic based project.</span>
+            <span class="main-info text-bold">Web Developing Assistant at Tor Vergata University</span> 
+            <span class="date-info">2019 - now</span> 
+            <span class="extra-info text-thin">University Tutor for HTML + CSS + JavaScript based courses.</span>
+            <span class="main-info text-bold">Front End Developer at Trevize s.r.l</span>
+            <span class="date-info">2019 - 2020</span>
+            <span class="extra-info text-thin">Collaborated as Front End Developer for Angular, Ionic and Wordpress based projects. </span>
+            <span class="main-info text-bold">Web Developing Teaching Assistant at Betacom</span> 
+            <span class="date-info">2019</span> 
+            <span class="extra-info text-thin">Teaching Assistant for Angular based courses.</span>
+            <span class="main-info text-bold">Journalist at Quotidiano del Lazio</span> 
+            <span class="date-info">2018-2020</span> 
+            <span class="main-info text-bold">Office Clerk at Tor Vergata University</span> 
+            <span class="date-info">2018</span>
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 content-card" [ngClass]="cardClass">
         <div class="responsive-width text-center">
-            <h1 class="text-bold">Projects</h1>
-            <mat-icon class="icon">devices</mat-icon>
+            <h1 class="heading text-bold">Projects</h1>
+            <!-- <mat-icon class="icon">devices</mat-icon> -->
         </div>
-        <div class="responsive-width text-semibold text-grey d-flex flex-column">
+        <div class="responsive-width text-semibold d-flex flex-column">
             <span>
-                <span class="text-black">Al Circo Massimo </span>-<a href="https://www.youtube.com/channel/UCFW7vR1zutzUxgSP_a_JuYQ" target="_blank" class="txt-90"> alcircomassimo</a>
+                <span class="main-info text-bold">Al Circo Massimo </span>-<a href="https://www.youtube.com/channel/UCFW7vR1zutzUxgSP_a_JuYQ" target="_blank" class="txt-90"> alcircomassimo</a>
             </span>
-            <span class="txt-70">2021</span>
-            <span class="txt-90 text-thin">TV Show logo designer.</span>
+            <span class="date-info">2021</span>
+            <span class="extra-info text-thin">TV Show logo designer.</span>
             <span>
-                <span class="text-black">Il mio avvocato </span>-<a href="https://ilmioavvocato.online/" target="_blank" class="txt-90"> ilmioavvocato.online</a>
+                <span class="main-info text-bold">Il mio avvocato </span>-<a href="https://ilmioavvocato.online/" target="_blank" class="txt-90"> ilmioavvocato.online</a>
             </span>
-            <span class="txt-70">2021</span>
-            <span class="txt-90 text-thin">Logo designer for a legal assistance online tool</span>
+            <span class="date-info">2021</span>
+            <span class="extra-info text-thin">Logo designer for a legal assistance online tool</span>
             <span class="d-flex align-items-center">
-                <span class="text-black" (click)="goTv()">Tor Vergata 4 Foreigners</span>
+                <span class="main-info text-bold" (click)="goTv()">Tor Vergata 4 Foreigners</span>
                 <mat-icon class="text-azure txt-100 pt-1">chevron_right</mat-icon>
             </span>
-            <span class="txt-70">2020</span>
-            <span class="text-thin txt-90">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students.</span>
+            <span class="date-info">2020</span>
+            <span class="extra-info text-thin">Angular web app and Ionic mobile app for University of Rome Tor Vergata’s foreign students.</span>
             <span>
-                <span class="text-black">European Aviation Academy </span>-<a href="https://flyeaa.com/" target="_blank" class="txt-90"> flyeaa.com</a>
+                <span class="main-info text-bold">European Aviation Academy </span>-<a href="https://flyeaa.com/" target="_blank" class="txt-90"> flyeaa.com</a>
             </span>
-            <span class="txt-70">2020</span>
-            <span class="text-thin txt-90">Elementor + Wordpress based web site </span>
+            <span class="date-info">2020</span>
+            <span class="extra-info text-thin">Elementor + Wordpress based web site </span>
             
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="mat-elevation-z8 mt-2 text-thin d-flex justify-content-center txt-90" [ngClass]="mode === false ? '' : 'cardark' " >
-        You can find all of my design projects in <a class="text-bold text-azure pointer" (click)="goDesign()"> this section</a>
+    <mat-card class="mat-elevation-z8 mt-2 text-thin d-flex justify-content-center txt-90 content-card" [ngClass]="cardClass" >
+        <span class="main-info">
+            You can find all of my design projects in <a class="text-bold text-azure pointer" (click)="goDesign()"> this section</a>
+        </span>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 content-card" [ngClass]="cardClass">
         <div class="responsive-width text-center">
-            <h1 class="text-bold">Education & Training</h1>
-            <mat-icon class="icon">menu_book</mat-icon>
+            <h1 class="heading text-bold">Education & Training</h1>
+            <!-- <mat-icon class="icon">menu_book</mat-icon> -->
         </div>
-        <div class="responsive-width text-semibold text-grey d-flex flex-column">
-            <span class="text-black">Languages in the Information Society Degree</span>
-            <span class="txt-70">2015-2020</span>
-            <span class="txt-90 text-thin"> University of Rome Tor Vergata <br>
+        <div class="responsive-width text-semibold d-flex flex-column">
+            <span class="main-info text-bold">Languages in the Information Society Degree</span>
+            <span class="date-info">2015-2020</span>
+            <span class="extra-info text-thin"> University of Rome Tor Vergata <br>
             Graduated with 110/110 with the thesis "Font's analysis and use in web communication". </span>
-            <span class="text-black">European project EU-MADE4LL</span>
-            <span class="txt-70">2017</span>
-            <span class="txt-90 text-thin">Production of a corporate video regarding the University of Rome Tor Vergata.</span>
-            <span class="text-black">Scientific High School Degree</span>
-            <span class="txt-70">2010 - 2015</span>
+            <span class="main-info text-bold">European project EU-MADE4LL</span>
+            <span class="date-info">2017</span>
+            <span class="extra-info text-thin">Production of a corporate video regarding the University of Rome Tor Vergata.</span>
+            <span class="main-info text-bold">Scientific High School Degree</span>
+            <span class="date-info">2010 - 2015</span>
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 content-card" [ngClass]="cardClass">
         <div class="responsive-width text-center">
-            <h1 class="text-bold">Skills</h1>
-            <mat-icon class="icon">diamond</mat-icon>
+            <h1 class="heading text-bold">Skills</h1>
+            <!-- <mat-icon class="icon">diamond</mat-icon> -->
         </div>
-        <div class="responsive-width text-semibold text-grey d-flex flex-column">
-            <span class="text-black">Developing</span> 
-            <span class="text-thin txt-90">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress</span>
-            <span class="text-black">Design</span> 
-            <span class="text-regular txt-90">Logo / Icon Design</span>
-            <span class="text-thin txt-90">Adobe Suite: Illustrator, Photoshop</span>
-            <span class="text-black">Languages</span> 
-            <span class="text-thin txt-90">English C1, German B1</span>
+        <div class="responsive-width d-flex flex-column">
+            <span class="main-info text-bold">Developing</span> 
+            <span class="extra-info text-thin">Angular, Typescript, Ionic, Javascript, Nativescript, Wordpress</span>
+            <span class="main-info text-bold">Design</span> 
+            <span class="date-info">Logo / Icon Design</span>
+            <span class="extra-info text-thin">Adobe Suite: Illustrator, Photoshop</span>
+            <span class="main-info text-bold">Languages</span> 
+            <span class="extra-info text-thin">English C1, German B1</span>
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center">
-    <mat-card class="d-flex justify-content-around mat-elevation-z8 interests" [ngClass]="mode === false ? '' : 'cardark' ">
+    <mat-card class="d-flex justify-content-around mat-elevation-z8 interests content-card" [ngClass]="cardClass">
         <div class="responsive-width text-center">
-            <h1 class="text-bold">Interests</h1>
-            <mat-icon class="icon">sports_basketball</mat-icon>
+            <h1 class="heading text-bold">Interests</h1>
+            <!-- <mat-icon class="icon">sports_basketball</mat-icon> -->
         </div>
         <div class="responsive-width text-semibold text-grey d-flex flex-column">
-            <span class="text-black">Design</span> 
-            <span class="text-thin txt-90">Creation of minimal graphic contents</span>
-            <span class="text-black">Sports</span> 
-            <span class="text-thin txt-90">Playing Basketball since 2002</span>
-            <span class="text-thin txt-90">Soccer</span> 
+            <span class="main-info text-bold">Design</span> 
+            <span class="extra-info text-thin">Creation of minimal graphic contents</span>
+            <span class="main-info text-bold">Sports</span> 
+            <span class="extra-info text-thin">Playing Basketball since 2002</span>
+            <span class="extra-info text-thin">Soccer</span> 
         </div>
     </mat-card>
 </div>
 
 <div class="d-flex justify-content-center" style="text-align: center; margin-top: 3%;">
     <mat-chip-list>
-        <mat-chip class="mat-elevation-z6" color="primary" selected="true">
+        <mat-chip class="mat-elevation-z4" color="primary" selected="true">
             <a style="color: white;" href="javascript:void(0)" 
             (click)="downloadPdf('./assets/cv-paolo-nazzaro-pdf.pdf','cv-paolo-nazzaro-pdf')" >
             Download PDF

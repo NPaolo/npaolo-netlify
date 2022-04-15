@@ -6,21 +6,22 @@ import { ThemeService } from '../theme.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input() mode: boolean;
+  @Input() mode: string;
 
-  @Output() emitMode: EventEmitter<Boolean> = new EventEmitter();
+  @Output() emitMode: EventEmitter<String> = new EventEmitter();
 
   constructor(private x : Router, private ts: ThemeService) {}
 
   ngOnInit(): void {
   }
 
-  switchMode() {
-    this.ts.switchMode();
-    this.mode = this.ts.modeBool;
+  setMode(event) {
+    this.mode = event;
+    this.ts.switchMode(event);
+    this.mode = this.ts.globalMode;
     this.emitMode.emit(this.mode);
     }
 
