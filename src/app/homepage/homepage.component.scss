@@ -99,6 +99,7 @@ mat-card {
 @media (max-width: 992px) {
     .container-fluid {
         min-height: 100% !important;
+        height: unset !important;
     }
 }
 
