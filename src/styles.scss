@@ -269,9 +269,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .name {
         color: grey;
     }
-    .mat-button-toggle-checked {
-        background-color: unset !important;
-        color: white !important;
+    mat-button-toggle-group {
+        background-color: #2b3b4e;
+        .mat-button-toggle-checked {
+            background-color: unset !important;
+            color: white !important;
+        }
     }
     mat-card {
         .heading, .main-info {
