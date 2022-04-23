@@ -85,12 +85,20 @@ mat-card {
     .container-fluid {
         flex-direction: column;
         height: 100vh !important;
-    }
-    .header, .content {
-        width: 100vw;
-        height: fit-content;
-        align-items: center !important;
-        text-align: center !important;
+        .header, .content {
+            width: 100vw;
+            height: fit-content;
+            align-items: center !important;
+            text-align: center !important;
+        }
+        .content {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            mat-card {
+                // width: 21rem !important;
+                width: 100% !important;
+            }
+        }
     }
     .desktop-title {
         display: none;
@@ -98,9 +106,7 @@ mat-card {
     .description {
         display: none;
     }
-    mat-card {
-        width: 22rem !important;
-    }
+
     mat-button-toggle-group {
         display: none;
     }
