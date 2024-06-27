@@ -28,16 +28,16 @@ mat-card {
     height: fit-content;
     width: 25rem;
     &.work-card {
-        background-color: rgba(56, 128, 255, 0.3) !important;
+        background-color: rgba(56, 128, 255, 0.15) !important;
         mat-chip { background-color: #3880ff !important; }
     }
     &.proj-card {
         background-color: rgba(94, 39, 205, 0.3) !important;
         mat-chip { background-color: #5f27cd !important; }
     }
-    &.contacts-card {
-        background-color: rgba(255, 165, 2, 0.3) !important;
-        mat-chip { background-color: #eb3b6d !important; }
+    &.bio-card {
+        // background-color: rgba(245, 245, 245, 0.3) !important;
+        background-color: rgba(45,213,91, 0.2) !important;
     }
     mat-chip {
         background-color: transparent !important;
@@ -51,8 +51,8 @@ mat-card {
         &.proj-card {
             mat-chip { color: #5f27cd; }
         }
-        &.contacts-card {
-            mat-chip { color: #ffa502; }
+        &.bio-card {
+            mat-chip { color: #28bb50 }
         }
     }
     &.dark-home-card {
@@ -60,17 +60,19 @@ mat-card {
         mat-chip { color: whitesmoke !important; }
         &.work-card {
             mat-chip { background-color: #3880ff !important; }
+            * { color: whitesmoke; }
         }
         &.proj-card {
             mat-chip { background-color: #5f27cd !important; }
         }
-        &.contacts-card {
-            mat-chip { background-color: #ffa502 !important; }
+        &.bio-card {
+            color: white;
+            // mat-chip { background-color: rgba(45,213,91, 1) !important; }
         }
     }
     &.color-home-card {
         backdrop-filter: blur(13px) saturate(120%) !important;
-        h1 {
+        * {
             color: aliceblue !important;
         }
         mat-chip {
@@ -81,19 +83,42 @@ mat-card {
     }
 }
 
+mat-accordion {
+    mat-expansion-panel {
+        box-shadow: none;
+        background-color: transparent;
+        mat-expansion-panel-header {
+
+            mat-panel-title {
+                text-align: left;
+                font-weight: bolder;
+            }
+            mat-panel-description {
+                justify-content: flex-end;
+                margin-right: 20px;
+            }
+        }
+        p {
+            text-align: left;
+        }
+        &.mat-expansion-panel-spacing {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media (max-width: 992px) {
     .container-fluid {
         flex-direction: column;
         height: 100vh !important;
         .header, .content {
-            width: 100vw;
+            width: 100%;
             height: fit-content;
             align-items: center !important;
             text-align: center !important;
         }
         .content {
-            padding-left: 1rem;
-            padding-right: 1rem;
             mat-card {
                 // width: 21rem !important;
                 width: 100% !important;
@@ -123,10 +148,24 @@ mat-card {
     app-header {
         display: none;
     }
+    .container-fluid {
+        height: 100% !important;
+        overflow-y: hidden;
+        .w-40 {
+            overflow-y: hidden;
+        }
+        .w-60 {
+            overflow-y: auto;
+            // height: fit-content;
+            .scroll {
+                // height: -webkit-fill-available;
+                padding-top: 60px;
+                padding-bottom: 30px;
+            }
+        }
+    }
 }
 
 @media (min-width: 1024px)  {
-    .container-fluid {
-        height: 100vh !important;
-    }
+
 }

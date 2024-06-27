@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AVVOCATO, CCN, MOKA, T2M, logos } from '../app.constants';
 import { DialogComponent } from '../dialog/dialog.component';
-import { AVVOCATO, T2M, MOKA, CCN, logos } from '../app.constants'
 import { ThemeService } from '../theme.service';
+declare var require: any
+const FileSaver = require('file-saver');
 
 @Component({
   selector: 'app-homepage',
@@ -60,6 +62,10 @@ constructor(private x : Router, private ts: ThemeService, public dialog: MatDial
   goColors(){
     this.x.navigate(['colors']);
     window.scrollTo(0, 0)
+  }
+
+  downloadPdf(pdfUrl: string, pdfName: string ) {
+    FileSaver.saveAs(pdfUrl, pdfName);
   }
 
   openDialog(title: string, description: string, image: string, url: string, color: string) {

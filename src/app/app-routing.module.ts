@@ -10,13 +10,14 @@ import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
-  {path: 'colors', component: ColorsComponent},
+  // {path: 'colors', component: ColorsComponent},
   {path: 'torvergata', component: TorvergataComponent},
-  {path: 'cv', component: CvComponent},
-  {path: 'work', component: WorkComponent},
-  {path: 'teaching', component: TeachingComponent},
-  {path: 'teaching', component: TeachingComponent},
-  {path: 'logo-designer', component: LogoDesignerComponent}];
+  // {path: 'cv', component: CvComponent},
+  // {path: 'work', component: WorkComponent},
+  // {path: 'teaching', component: TeachingComponent},
+  // {path: 'teaching', component: TeachingComponent},
+  // {path: 'logo-designer', component: LogoDesignerComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
