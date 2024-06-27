@@ -123,6 +123,9 @@ mat-accordion {
                 // width: 21rem !important;
                 width: 100% !important;
             }
+            .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+                background: transparent;
+            }
         }
     }
     .desktop-title {
