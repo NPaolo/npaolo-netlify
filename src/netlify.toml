@@ -1,6 +1,7 @@
 [build]
   publish = "dist/anglify"
   command = "ng build --prod"
+  node_version = "16"
 [[redirects]]
   from = "/*"
   to = "/index.html"
